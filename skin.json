@@ -1,0 +1,68 @@
+{
+  "name": "Xbox 360 Blades",
+  "author": "tameranian, Blade0",
+  "description": "Jump In to 2010 again",
+  "version": "1.0.0",
+  "Patches": [
+    {
+      "MatchRegexString": "https://(store\\.steampowered|steamcommunity)\\.com.*",
+      "TargetJs": "js/store.js"
+    },
+    {
+      "MatchRegexString": "https://steamcommunity\\.com.*",
+      "TargetCss": "css/community.css"
+    },
+    {
+      "MatchRegexString": "https://store\\.steampowered\\.com.*",
+      "TargetCss": "css/store.css"
+    },
+    {
+      "MatchRegexString": "https://(store\\.steampowered|steamcommunity)\\.com.*",
+      "TargetCss": "css/web.css"
+    },
+    {
+      "MatchRegexString": ".*",
+      "TargetCss": "css/keyboard.css"
+    },
+    {
+      "MatchRegexString": ".*",
+      "TargetCss": "css/achievements.css"
+    },
+    {
+      "MatchRegexString": ".*",
+      "TargetCss": "css/font.css"
+    },
+    {
+      "MatchRegexString": "^Steam Big Picture Mode$",
+      "TargetCss": "css/glyphs.css"
+    },
+    {
+      "MatchRegexString": "^Steam Big Picture Mode$",
+      "TargetCss": "css/blades.css"
+    },
+    {
+      "MatchRegexString": "^Steam Big Picture Mode$",
+      "TargetCss": "css/guide.css"
+    },
+    {
+      "MatchRegexString": "^Steam Big Picture Mode$",
+      "TargetJs": "js/audio.js"
+    },
+    {
+      "MatchRegexString": "Steam Big Picture Mode|BasicUI|GamepadUI|notificationtoasts|Steam Overlay",
+      "TargetJs": "js/position.js"
+    },
+    {
+      "MatchRegexString": "Steam Big Picture Mode|BasicUI|GamepadUI|notificationtoasts|Steam Overlay",
+      "TargetJs": "js/xam-notify.js"
+    },
+    {
+      "MatchRegexString": "^Steam Big Picture Mode$",
+      "TargetJs": "js/blades.js"
+    },
+    {
+      "MatchRegexString": "^Steam Big Picture Mode$",
+      "TargetJs": "js/pages.js"
+    }
+  ]
+}

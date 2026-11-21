@@ -1,0 +1,1070 @@
+[
+  {
+    "name": "bgCurve1",
+    "origin": [196.667, 355.0],
+    "keys": [
+      {
+        "frame": 0,
+        "easing": "none",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 0.0,
+        "x": 0.0,
+        "y": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 1.0
+      },
+      {
+        "frame": 23,
+        "easing": "linear",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": 29.064,
+        "y": 0.0,
+        "scaleX": 0.1,
+        "scaleY": 1.0,
+        "opacity": 0.0
+      },
+      {
+        "frame": 27,
+        "easing": "ease",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 50.0,
+        "visible": 1.0,
+        "x": 29.074,
+        "y": 0.0,
+        "scaleX": 0.1,
+        "scaleY": 1.0,
+        "opacity": 0.95
+      },
+      {
+        "frame": 44,
+        "easing": "ease",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 50.0,
+        "visible": 1.0,
+        "x": -5.928,
+        "y": 0.0,
+        "scaleX": 1.194,
+        "scaleY": 1.0,
+        "opacity": 0.95
+      },
+      {
+        "frame": 51,
+        "easing": "none",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": 0.262,
+        "y": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 0.95
+      },
+      {
+        "frame": 228,
+        "easing": "linear",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": 0.287,
+        "y": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 0.95
+      },
+      {
+        "frame": 240,
+        "easing": "linear",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 0.0,
+        "x": 29.852,
+        "y": 0.0,
+        "scaleX": 0.076,
+        "scaleY": 1.0,
+        "opacity": 0.0
+      }
+    ],
+    "draw": [
+      {
+        "kind": "IMAGE",
+        "rect": [217.0, 348.0, 433.0, 54.0],
+        "file": "notify_bgCurve1.png"
+      }
+    ]
+  },
+  {
+    "name": "round",
+    "origin": [172.867, 344.2],
+    "keys": [
+      {
+        "frame": 0,
+        "easing": "none",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 0.0,
+        "x": 0.0,
+        "y": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 1.0
+      },
+      {
+        "frame": 23,
+        "easing": "linear",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": 0.0,
+        "y": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 0.0
+      },
+      {
+        "frame": 27,
+        "easing": "none",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": 0.0,
+        "y": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 0.95
+      },
+      {
+        "frame": 228,
+        "easing": "linear",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": 0.0,
+        "y": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 0.95
+      },
+      {
+        "frame": 240,
+        "easing": "ease",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 50.0,
+        "visible": 0.0,
+        "x": 0.0,
+        "y": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 0.0
+      }
+    ],
+    "draw": [
+      {
+        "kind": "IMAGE",
+        "rect": [202.533, 348.2, 26.333, 53.0],
+        "file": "notify_round.png"
+      }
+    ]
+  },
+  {
+    "name": "logoback",
+    "origin": [206.667, 351.63],
+    "keys": [
+      {
+        "frame": 0,
+        "easing": "ease",
+        "easeIn": 0.0,
+        "easeOut": 100.0,
+        "easeWeight": 50.0,
+        "visible": 1.0,
+        "x": 20.7,
+        "y": 20.7,
+        "scaleX": 0.1,
+        "scaleY": 0.1,
+        "opacity": 0.0
+      },
+      {
+        "frame": 28,
+        "easing": "linear",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": -10.35,
+        "y": -10.35,
+        "scaleX": 1.45,
+        "scaleY": 1.45,
+        "opacity": 1.0
+      },
+      {
+        "frame": 39,
+        "easing": "none",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": 0.0,
+        "y": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 1.0
+      },
+      {
+        "frame": 196,
+        "easing": "ease",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 50.0,
+        "visible": 1.0,
+        "x": 0.0,
+        "y": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 1.0
+      },
+      {
+        "frame": 210,
+        "easing": "none",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": -9.2,
+        "y": -9.2,
+        "scaleX": 1.4,
+        "scaleY": 1.4,
+        "opacity": 0.682
+      },
+      {
+        "frame": 215,
+        "easing": "ease",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 50.0,
+        "visible": 1.0,
+        "x": -9.2,
+        "y": -9.2,
+        "scaleX": 1.4,
+        "scaleY": 1.4,
+        "opacity": 0.682
+      },
+      {
+        "frame": 233,
+        "easing": "none",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 0.0,
+        "x": 18.4,
+        "y": 18.4,
+        "scaleX": 0.2,
+        "scaleY": 0.2,
+        "opacity": 0.0
+      },
+      {
+        "frame": 240,
+        "easing": "linear",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 0.0,
+        "x": 0.996,
+        "y": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 0.0
+      }
+    ],
+    "draw": [
+      {
+        "kind": "GRADIENT_RECT",
+        "rect": [206.667, 351.63, 46.0, 46.0],
+        "stops": [
+          [0.8, "rgba(15,15,15,1.0)"],
+          [0.914, "rgba(15,15,15,0.0)"]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "bg",
+    "origin": [191.257, 335.213],
+    "keys": [
+      {
+        "frame": 0,
+        "easing": "ease",
+        "easeIn": 0.0,
+        "easeOut": 100.0,
+        "easeWeight": 50.0,
+        "visible": 1.0,
+        "x": 32.352,
+        "y": 33.105,
+        "scaleX": 0.154,
+        "scaleY": 0.154,
+        "opacity": 0.0
+      },
+      {
+        "frame": 28,
+        "easing": "linear",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": -22.771,
+        "y": -23.467,
+        "scaleX": 1.6,
+        "scaleY": 1.6,
+        "opacity": 1.0
+      },
+      {
+        "frame": 39,
+        "easing": "none",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": 0.162,
+        "y": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 1.0
+      },
+      {
+        "frame": 196,
+        "easing": "ease",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 50.0,
+        "visible": 1.0,
+        "x": 0.162,
+        "y": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 1.0
+      },
+      {
+        "frame": 210,
+        "easing": "none",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": -17.038,
+        "y": -17.6,
+        "scaleX": 1.45,
+        "scaleY": 1.45,
+        "opacity": 1.0
+      },
+      {
+        "frame": 215,
+        "easing": "ease",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 50.0,
+        "visible": 1.0,
+        "x": -17.038,
+        "y": -17.6,
+        "scaleX": 1.45,
+        "scaleY": 1.45,
+        "opacity": 1.0
+      },
+      {
+        "frame": 233,
+        "easing": "none",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 0.0,
+        "x": 30.74,
+        "y": 31.289,
+        "scaleX": 0.2,
+        "scaleY": 0.2,
+        "opacity": 1.0
+      },
+      {
+        "frame": 240,
+        "easing": "linear",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 0.0,
+        "x": 30.74,
+        "y": 31.289,
+        "scaleX": 0.2,
+        "scaleY": 0.2,
+        "opacity": 1.0
+      }
+    ],
+    "draw": [
+      {
+        "kind": "IMAGE",
+        "rect": [211.924, 356.879, 35.667, 36.333],
+        "file": "notify_bg.png"
+      }
+    ]
+  },
+  {
+    "name": "explosion",
+    "origin": [207.174, 350.844],
+    "keys": [
+      {
+        "frame": 0,
+        "easing": "none",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 0.0,
+        "x": 20.2,
+        "y": 21.267,
+        "scaleX": 0.1,
+        "scaleY": 0.1,
+        "opacity": 1.0
+      },
+      {
+        "frame": 5,
+        "easing": "ease",
+        "easeIn": 0.0,
+        "easeOut": 100.0,
+        "easeWeight": 50.0,
+        "visible": 1.0,
+        "x": 20.167,
+        "y": 21.659,
+        "scaleX": 0.09,
+        "scaleY": 0.09,
+        "opacity": 0.5
+      },
+      {
+        "frame": 37,
+        "easing": "linear",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": -3.201,
+        "y": -1.679,
+        "scaleX": 1.12,
+        "scaleY": 1.12,
+        "opacity": 1.0
+      },
+      {
+        "frame": 43,
+        "easing": "linear",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": 1.737,
+        "y": 3.519,
+        "scaleX": 0.9,
+        "scaleY": 0.9,
+        "opacity": 0.3
+      },
+      {
+        "frame": 48,
+        "easing": "none",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 0.0,
+        "x": 5.83,
+        "y": 7.828,
+        "scaleX": 0.718,
+        "scaleY": 0.718,
+        "opacity": 0.059
+      },
+      {
+        "frame": 185,
+        "easing": "linear",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 0.0,
+        "x": 5.83,
+        "y": 7.828,
+        "scaleX": 0.718,
+        "scaleY": 0.718,
+        "opacity": 0.059
+      },
+      {
+        "frame": 186,
+        "easing": "linear",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": 5.83,
+        "y": 7.828,
+        "scaleX": 0.718,
+        "scaleY": 0.718,
+        "opacity": 0.0
+      },
+      {
+        "frame": 205,
+        "easing": "linear",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": 6.357,
+        "y": 7.17,
+        "scaleX": 0.718,
+        "scaleY": 0.718,
+        "opacity": 0.5
+      },
+      {
+        "frame": 210,
+        "easing": "none",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 0.0,
+        "x": 0.019,
+        "y": 0.498,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 0.0
+      },
+      {
+        "frame": 240,
+        "easing": "linear",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 0.0,
+        "x": 5.83,
+        "y": 7.828,
+        "scaleX": 0.718,
+        "scaleY": 0.718,
+        "opacity": 1.0
+      }
+    ],
+    "draw": [
+      {
+        "kind": "GRADIENT_RECT",
+        "rect": [207.174, 350.844, 45.0, 45.0],
+        "stops": [
+          [0.62, "rgba(15,15,15,1.0)"],
+          [0.737, "rgba(15,235,15,0.5882352941176471)"],
+          [0.831, "rgba(130,235,15,0.39215686274509803)"],
+          [0.949, "rgba(15,235,15,0.0)"]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Indicator1",
+    "origin": [152.667, 297.0],
+    "keys": [
+      {
+        "frame": 0,
+        "easing": "none",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 0.0,
+        "x": 0.0,
+        "y": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 1.0
+      },
+      {
+        "frame": 44,
+        "easing": "none",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": -0.374,
+        "y": 0.093,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 1.0
+      },
+      {
+        "frame": 192,
+        "easing": "none",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 0.0,
+        "x": 0.0,
+        "y": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 1.0
+      },
+      {
+        "frame": 240,
+        "easing": "linear",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 0.0,
+        "x": 0.0,
+        "y": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 1.0
+      }
+    ],
+    "draw": [
+      {
+        "kind": "IMAGE",
+        "rect": [212.0, 356.333, 15.667, 15.667],
+        "file": "notify_Indicator1.png"
+      }
+    ]
+  },
+  {
+    "name": "xenonLogo1",
+    "origin": [200.435, 345.204],
+    "keys": [
+      {
+        "frame": 0,
+        "easing": "none",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 0.0,
+        "x": 0.0,
+        "y": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 1.0
+      },
+      {
+        "frame": 5,
+        "easing": "ease",
+        "easeIn": 0.0,
+        "easeOut": 100.0,
+        "easeWeight": 50.0,
+        "visible": 1.0,
+        "x": 25.973,
+        "y": 26.372,
+        "scaleX": 0.1,
+        "scaleY": 0.1,
+        "opacity": 0.5
+      },
+      {
+        "frame": 37,
+        "easing": "linear",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": -14.982,
+        "y": -14.982,
+        "scaleX": 1.5,
+        "scaleY": 1.5,
+        "opacity": 1.0
+      },
+      {
+        "frame": 43,
+        "easing": "none",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": 1.45,
+        "y": 1.45,
+        "scaleX": 0.95,
+        "scaleY": 0.95,
+        "opacity": 1.0
+      },
+      {
+        "frame": 60,
+        "easing": "linear",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": 1.45,
+        "y": 1.45,
+        "scaleX": 0.95,
+        "scaleY": 0.95,
+        "opacity": 1.0
+      },
+      {
+        "frame": 65,
+        "easing": "none",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": 1.45,
+        "y": 1.45,
+        "scaleX": 0.95,
+        "scaleY": 0.95,
+        "opacity": 0.0
+      },
+      {
+        "frame": 125,
+        "easing": "linear",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": 1.45,
+        "y": 1.45,
+        "scaleX": 0.95,
+        "scaleY": 0.95,
+        "opacity": 0.0
+      },
+      {
+        "frame": 130,
+        "easing": "none",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": 1.45,
+        "y": 1.45,
+        "scaleX": 0.95,
+        "scaleY": 0.95,
+        "opacity": 1.0
+      },
+      {
+        "frame": 180,
+        "easing": "linear",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": 1.45,
+        "y": 1.45,
+        "scaleX": 0.95,
+        "scaleY": 0.95,
+        "opacity": 1.0
+      },
+      {
+        "frame": 185,
+        "easing": "none",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 0.0,
+        "x": 1.45,
+        "y": 1.45,
+        "scaleX": 0.95,
+        "scaleY": 0.95,
+        "opacity": 0.0
+      },
+      {
+        "frame": 195,
+        "easing": "linear",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": 1.45,
+        "y": 1.45,
+        "scaleX": 0.95,
+        "scaleY": 0.95,
+        "opacity": 0.0
+      },
+      {
+        "frame": 210,
+        "easing": "none",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": 1.45,
+        "y": 1.45,
+        "scaleX": 0.95,
+        "scaleY": 0.95,
+        "opacity": 1.0
+      },
+      {
+        "frame": 222,
+        "easing": "linear",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": 1.45,
+        "y": 1.45,
+        "scaleX": 0.95,
+        "scaleY": 0.95,
+        "opacity": 1.0
+      },
+      {
+        "frame": 233,
+        "easing": "none",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 0.0,
+        "x": 23.357,
+        "y": 23.278,
+        "scaleX": 0.2,
+        "scaleY": 0.2,
+        "opacity": 1.0
+      },
+      {
+        "frame": 240,
+        "easing": "linear",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 0.0,
+        "x": 23.2,
+        "y": 23.2,
+        "scaleX": 0.2,
+        "scaleY": 0.2,
+        "opacity": 1.0
+      }
+    ],
+    "draw": [
+      {
+        "kind": "IMAGE",
+        "rect": [200.435, 345.204, 58.0, 58.0],
+        "file": "xenonLogo.png"
+      }
+    ]
+  },
+  {
+    "name": "Image",
+    "origin": [217.667, 363.0],
+    "keys": [
+      {
+        "frame": 0,
+        "easing": "none",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 0.0,
+        "x": 0.0,
+        "y": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 0.185
+      },
+      {
+        "frame": 65,
+        "easing": "linear",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": 0.0,
+        "y": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 0.0
+      },
+      {
+        "frame": 70,
+        "easing": "none",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": 0.0,
+        "y": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 1.0
+      },
+      {
+        "frame": 120,
+        "easing": "linear",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": 0.0,
+        "y": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 1.0
+      },
+      {
+        "frame": 125,
+        "easing": "none",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": 0.0,
+        "y": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 0.0
+      },
+      {
+        "frame": 185,
+        "easing": "linear",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": 0.0,
+        "y": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 0.0
+      },
+      {
+        "frame": 186,
+        "easing": "linear",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": 0.0,
+        "y": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 1.0
+      },
+      {
+        "frame": 192,
+        "easing": "linear",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 0.0,
+        "x": 0.0,
+        "y": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 0.0
+      },
+      {
+        "frame": 240,
+        "easing": "linear",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 0.0,
+        "x": 0.0,
+        "y": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 0.0
+      }
+    ],
+    "draw": [
+      {
+        "kind": "IMAGE",
+        "rect": [217.667, 363.0, 24.0, 24.0],
+        "file": "Achievement.png"
+      }
+    ]
+  },
+  {
+    "name": "TextPresenter",
+    "origin": [255.667, 345.0],
+    "keys": [
+      {
+        "frame": 0,
+        "easing": "none",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 0.0,
+        "x": 0.0,
+        "y": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 1.0
+      },
+      {
+        "frame": 38,
+        "easing": "linear",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": 0.0,
+        "y": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 0.0
+      },
+      {
+        "frame": 44,
+        "easing": "none",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": 0.0,
+        "y": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 1.0
+      },
+      {
+        "frame": 217,
+        "easing": "linear",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 1.0,
+        "x": 0.0,
+        "y": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 1.0
+      },
+      {
+        "frame": 223,
+        "easing": "none",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 0.0,
+        "x": 0.0,
+        "y": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 0.0
+      },
+      {
+        "frame": 240,
+        "easing": "linear",
+        "easeIn": 0.0,
+        "easeOut": 0.0,
+        "easeWeight": 0.0,
+        "visible": 0.0,
+        "x": 0.0,
+        "y": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "opacity": 0.0
+      }
+    ],
+    "draw": [
+      {
+        "kind": "TEXT",
+        "rect": [255.667, 357.25, 373.0, 17.75],
+        "size": 14.667,
+        "label": "Achievement unlocked"
+      },
+      {
+        "kind": "TEXT",
+        "rect": [255.667, 375.0, 373.0, 17.75],
+        "size": 14.667,
+        "label": "20G - Test Achievement"
+      }
+    ]
+  }
+]

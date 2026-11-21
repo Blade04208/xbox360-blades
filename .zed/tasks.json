@@ -1,0 +1,28 @@
+[
+  {
+    "label": "Reload Steam",
+    "command": "./.zed/reloadsteam.sh",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "never",
+    "hide": "never",
+    "shell": {
+      "program": "bash"
+    },
+    "show_summary": true,
+    "show_command": false,
+    "save": "all"
+  },
+  {
+    "label": "Open Steam",
+    "command": "steam -dev -tenfoot -windowed -openalldevtools > /dev/null 2>&1 &",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "never",
+    "hide": "never",
+    "shell": "system",
+    "show_summary": true,
+    "show_command": false,
+    "save": "all"
+  }
+]

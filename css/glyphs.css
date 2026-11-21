@@ -1,0 +1,461 @@
+:root {
+  --nxe-A: url("../assets/glyphs/a.svg");
+  --nxe-B: url("../assets/glyphs/b.svg");
+  --nxe-X: url("../assets/glyphs/x.svg");
+  --nxe-Y: url("../assets/glyphs/y.svg");
+  --nxe-LB: url("../assets/glyphs/lb.svg");
+  --nxe-RB: url("../assets/glyphs/rb.svg");
+  --nxe-LT: url("../assets/glyphs/lt.svg");
+  --nxe-RT: url("../assets/glyphs/rt.svg");
+  --nxe-DPAD: url("../assets/glyphs/dpad.svg");
+  --nxe-UP: url("../assets/glyphs/up.svg");
+  --nxe-DOWN: url("../assets/glyphs/down.svg");
+  --nxe-LEFT: url("../assets/glyphs/left.svg");
+  --nxe-RIGHT: url("../assets/glyphs/right.svg");
+  --nxe-PAD: url("../assets/glyphs/pad.svg");
+  --nxe-GUIDE: url("../assets/glyphs/guide.png");
+  --nxe-BACK: url("../assets/glyphs/back.svg");
+  --nxe-START: url("../assets/glyphs/start.svg");
+}
+
+img[src*="/shared_button_a."],
+img[src*="/shared_button_a_sm."],
+img[src*="/shared_button_a_md."],
+img[src*="/shared_button_a_lg."],
+img[src*="/shared_color_button_a."],
+img[src*="/shared_color_button_a_sm."],
+img[src*="/shared_color_button_a_md."],
+img[src*="/shared_color_button_a_lg."],
+img[src*="/shared_outlined_button_a."],
+img[src*="/shared_outlined_button_a_sm."],
+img[src*="/shared_outlined_button_a_md."],
+img[src*="/shared_outlined_button_a_lg."],
+img[src*="/shared_color_outlined_button_a."],
+img[src*="/shared_color_outlined_button_a_sm."],
+img[src*="/shared_color_outlined_button_a_md."],
+img[src*="/shared_color_outlined_button_a_lg."] {
+  content: var(--nxe-A) !important;
+  object-fit: contain;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+img[src*="/shared_button_b."],
+img[src*="/shared_button_b_sm."],
+img[src*="/shared_button_b_md."],
+img[src*="/shared_button_b_lg."],
+img[src*="/shared_color_button_b."],
+img[src*="/shared_color_button_b_sm."],
+img[src*="/shared_color_button_b_md."],
+img[src*="/shared_color_button_b_lg."],
+img[src*="/shared_outlined_button_b."],
+img[src*="/shared_outlined_button_b_sm."],
+img[src*="/shared_outlined_button_b_md."],
+img[src*="/shared_outlined_button_b_lg."],
+img[src*="/shared_color_outlined_button_b."],
+img[src*="/shared_color_outlined_button_b_sm."],
+img[src*="/shared_color_outlined_button_b_md."],
+img[src*="/shared_color_outlined_button_b_lg."] {
+  content: var(--nxe-B) !important;
+  object-fit: contain;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+img[src*="/shared_button_x."],
+img[src*="/shared_button_x_sm."],
+img[src*="/shared_button_x_md."],
+img[src*="/shared_button_x_lg."],
+img[src*="/shared_color_button_x."],
+img[src*="/shared_color_button_x_sm."],
+img[src*="/shared_color_button_x_md."],
+img[src*="/shared_color_button_x_lg."],
+img[src*="/shared_outlined_button_x."],
+img[src*="/shared_outlined_button_x_sm."],
+img[src*="/shared_outlined_button_x_md."],
+img[src*="/shared_outlined_button_x_lg."],
+img[src*="/shared_color_outlined_button_x."],
+img[src*="/shared_color_outlined_button_x_sm."],
+img[src*="/shared_color_outlined_button_x_md."],
+img[src*="/shared_color_outlined_button_x_lg."] {
+  content: var(--nxe-X) !important;
+  object-fit: contain;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+img[src*="/shared_button_y."],
+img[src*="/shared_button_y_sm."],
+img[src*="/shared_button_y_md."],
+img[src*="/shared_button_y_lg."],
+img[src*="/shared_color_button_y."],
+img[src*="/shared_color_button_y_sm."],
+img[src*="/shared_color_button_y_md."],
+img[src*="/shared_color_button_y_lg."],
+img[src*="/shared_outlined_button_y."],
+img[src*="/shared_outlined_button_y_sm."],
+img[src*="/shared_outlined_button_y_md."],
+img[src*="/shared_outlined_button_y_lg."],
+img[src*="/shared_color_outlined_button_y."],
+img[src*="/shared_color_outlined_button_y_sm."],
+img[src*="/shared_color_outlined_button_y_md."],
+img[src*="/shared_color_outlined_button_y_lg."] {
+  content: var(--nxe-Y) !important;
+  object-fit: contain;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+img[src*="/xbox_lb."],
+img[src*="/xbox_lb_sm."],
+img[src*="/xbox_lb_md."],
+img[src*="/xbox_lb_lg."],
+img[src*="/sd_l1."],
+img[src*="/sd_l1_sm."],
+img[src*="/sd_l1_md."],
+img[src*="/sd_l1_lg."],
+img[src*="/sc_l1."],
+img[src*="/sc_l1_sm."],
+img[src*="/sc_l1_md."],
+img[src*="/sc_l1_lg."],
+img[src*="/sc_lb."],
+img[src*="/sc_lb_sm."],
+img[src*="/sc_lb_md."],
+img[src*="/sc_lb_lg."],
+img[src*="/ps_lb."],
+img[src*="/ps_lb_sm."],
+img[src*="/ps_lb_md."],
+img[src*="/ps_lb_lg."],
+img[src*="/ps4_l1."],
+img[src*="/ps4_l1_sm."],
+img[src*="/ps4_l1_md."],
+img[src*="/ps4_l1_lg."],
+img[src*="/ps5_l1."],
+img[src*="/ps5_l1_sm."],
+img[src*="/ps5_l1_md."],
+img[src*="/ps5_l1_lg."] {
+  content: var(--nxe-LB) !important;
+  object-fit: contain;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+img[src*="/xbox_rb."],
+img[src*="/xbox_rb_sm."],
+img[src*="/xbox_rb_md."],
+img[src*="/xbox_rb_lg."],
+img[src*="/sd_r1."],
+img[src*="/sd_r1_sm."],
+img[src*="/sd_r1_md."],
+img[src*="/sd_r1_lg."],
+img[src*="/sc_r1."],
+img[src*="/sc_r1_sm."],
+img[src*="/sc_r1_md."],
+img[src*="/sc_r1_lg."],
+img[src*="/sc_rb."],
+img[src*="/sc_rb_sm."],
+img[src*="/sc_rb_md."],
+img[src*="/sc_rb_lg."],
+img[src*="/ps_rb."],
+img[src*="/ps_rb_sm."],
+img[src*="/ps_rb_md."],
+img[src*="/ps_rb_lg."],
+img[src*="/ps4_r1."],
+img[src*="/ps4_r1_sm."],
+img[src*="/ps4_r1_md."],
+img[src*="/ps4_r1_lg."],
+img[src*="/ps5_r1."],
+img[src*="/ps5_r1_sm."],
+img[src*="/ps5_r1_md."],
+img[src*="/ps5_r1_lg."] {
+  content: var(--nxe-RB) !important;
+  object-fit: contain;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+img[src*="/xbox_lt."],
+img[src*="/xbox_lt_sm."],
+img[src*="/xbox_lt_md."],
+img[src*="/xbox_lt_lg."],
+img[src*="/sd_l2."],
+img[src*="/sd_l2_sm."],
+img[src*="/sd_l2_md."],
+img[src*="/sd_l2_lg."],
+img[src*="/sc_l2."],
+img[src*="/sc_l2_sm."],
+img[src*="/sc_l2_md."],
+img[src*="/sc_l2_lg."],
+img[src*="/sc_lt."],
+img[src*="/sc_lt_sm."],
+img[src*="/sc_lt_md."],
+img[src*="/sc_lt_lg."],
+img[src*="/ps4_l2."],
+img[src*="/ps4_l2_sm."],
+img[src*="/ps4_l2_md."],
+img[src*="/ps4_l2_lg."],
+img[src*="/ps5_l2."],
+img[src*="/ps5_l2_sm."],
+img[src*="/ps5_l2_md."],
+img[src*="/ps5_l2_lg."] {
+  content: var(--nxe-LT) !important;
+  object-fit: contain;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+img[src*="/xbox_rt."],
+img[src*="/xbox_rt_sm."],
+img[src*="/xbox_rt_md."],
+img[src*="/xbox_rt_lg."],
+img[src*="/sd_r2."],
+img[src*="/sd_r2_sm."],
+img[src*="/sd_r2_md."],
+img[src*="/sd_r2_lg."],
+img[src*="/sc_r2."],
+img[src*="/sc_r2_sm."],
+img[src*="/sc_r2_md."],
+img[src*="/sc_r2_lg."],
+img[src*="/sc_rt."],
+img[src*="/sc_rt_sm."],
+img[src*="/sc_rt_md."],
+img[src*="/sc_rt_lg."],
+img[src*="/ps4_r2."],
+img[src*="/ps4_r2_sm."],
+img[src*="/ps4_r2_md."],
+img[src*="/ps4_r2_lg."],
+img[src*="/ps5_r2."],
+img[src*="/ps5_r2_sm."],
+img[src*="/ps5_r2_md."],
+img[src*="/ps5_r2_lg."] {
+  content: var(--nxe-RT) !important;
+  object-fit: contain;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+img[src*="/shared_dpad."],
+img[src*="/shared_dpad_sm."],
+img[src*="/shared_dpad_md."],
+img[src*="/shared_dpad_lg."],
+img[src*="/sc_dpad."],
+img[src*="/sc_dpad_sm."],
+img[src*="/sc_dpad_md."],
+img[src*="/sc_dpad_lg."] {
+  content: var(--nxe-DPAD) !important;
+  object-fit: contain;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+img[src*="/shared_dpad_up."],
+img[src*="/shared_dpad_up_sm."],
+img[src*="/shared_dpad_up_md."],
+img[src*="/shared_dpad_up_lg."],
+img[src*="/sc_dpad_up."],
+img[src*="/sc_dpad_up_sm."],
+img[src*="/sc_dpad_up_md."],
+img[src*="/sc_dpad_up_lg."] {
+  content: var(--nxe-UP) !important;
+  object-fit: contain;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+img[src*="/shared_dpad_down."],
+img[src*="/shared_dpad_down_sm."],
+img[src*="/shared_dpad_down_md."],
+img[src*="/shared_dpad_down_lg."],
+img[src*="/sc_dpad_down."],
+img[src*="/sc_dpad_down_sm."],
+img[src*="/sc_dpad_down_md."],
+img[src*="/sc_dpad_down_lg."] {
+  content: var(--nxe-DOWN) !important;
+  object-fit: contain;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+img[src*="/shared_dpad_left."],
+img[src*="/shared_dpad_left_sm."],
+img[src*="/shared_dpad_left_md."],
+img[src*="/shared_dpad_left_lg."],
+img[src*="/sc_dpad_left."],
+img[src*="/sc_dpad_left_sm."],
+img[src*="/sc_dpad_left_md."],
+img[src*="/sc_dpad_left_lg."] {
+  content: var(--nxe-LEFT) !important;
+  object-fit: contain;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+img[src*="/shared_dpad_right."],
+img[src*="/shared_dpad_right_sm."],
+img[src*="/shared_dpad_right_md."],
+img[src*="/shared_dpad_right_lg."],
+img[src*="/sc_dpad_right."],
+img[src*="/sc_dpad_right_sm."],
+img[src*="/sc_dpad_right_md."],
+img[src*="/sc_dpad_right_lg."] {
+  content: var(--nxe-RIGHT) !important;
+  object-fit: contain;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+img[src*="/xbox_button_logo."],
+img[src*="/xbox_button_logo_sm."],
+img[src*="/xbox_button_logo_md."],
+img[src*="/xbox_button_logo_lg."],
+img[src*="/sc_button_steam."],
+img[src*="/sc_button_steam_sm."],
+img[src*="/sc_button_steam_md."],
+img[src*="/sc_button_steam_lg."],
+img[src*="/sd_button_steam."],
+img[src*="/sd_button_steam_sm."],
+img[src*="/sd_button_steam_md."],
+img[src*="/sd_button_steam_lg."],
+img[src*="/ps4_button_logo."],
+img[src*="/ps4_button_logo_sm."],
+img[src*="/ps4_button_logo_md."],
+img[src*="/ps4_button_logo_lg."],
+img[src*="/switchpro_button_home."],
+img[src*="/switchpro_button_home_sm."],
+img[src*="/switchpro_button_home_md."],
+img[src*="/switchpro_button_home_lg."],
+img[src*="/8bitdo_button_home."],
+img[src*="/8bitdo_button_home_sm."],
+img[src*="/8bitdo_button_home_md."],
+img[src*="/8bitdo_button_home_lg."] {
+  content: var(--nxe-GUIDE) !important;
+  object-fit: contain;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+img[src*="/xbox_button_select."],
+img[src*="/xbox_button_select_sm."],
+img[src*="/xbox_button_select_md."],
+img[src*="/xbox_button_select_lg."],
+img[src*="/xbox360_button_select."],
+img[src*="/xbox360_button_select_sm."],
+img[src*="/xbox360_button_select_md."],
+img[src*="/xbox360_button_select_lg."],
+img[src*="/sd_button_view."],
+img[src*="/sd_button_view_sm."],
+img[src*="/sd_button_view_md."],
+img[src*="/sd_button_view_lg."],
+img[src*="/sc_button_l_arrow."],
+img[src*="/sc_button_l_arrow_sm."],
+img[src*="/sc_button_l_arrow_md."],
+img[src*="/sc_button_l_arrow_lg."],
+img[src*="/ps4_button_share."],
+img[src*="/ps4_button_share_sm."],
+img[src*="/ps4_button_share_md."],
+img[src*="/ps4_button_share_lg."],
+img[src*="/ps5_button_create."],
+img[src*="/ps5_button_create_sm."],
+img[src*="/ps5_button_create_md."],
+img[src*="/ps5_button_create_lg."],
+img[src*="/switchpro_button_minus."],
+img[src*="/switchpro_button_minus_sm."],
+img[src*="/switchpro_button_minus_md."],
+img[src*="/switchpro_button_minus_lg."] {
+  content: var(--nxe-BACK) !important;
+  object-fit: contain;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+img[src*="/xbox_button_start."],
+img[src*="/xbox_button_start_sm."],
+img[src*="/xbox_button_start_md."],
+img[src*="/xbox_button_start_lg."],
+img[src*="/xbox360_button_start."],
+img[src*="/xbox360_button_start_sm."],
+img[src*="/xbox360_button_start_md."],
+img[src*="/xbox360_button_start_lg."],
+img[src*="/sd_button_menu."],
+img[src*="/sd_button_menu_sm."],
+img[src*="/sd_button_menu_md."],
+img[src*="/sd_button_menu_lg."],
+img[src*="/sc_button_r_arrow."],
+img[src*="/sc_button_r_arrow_sm."],
+img[src*="/sc_button_r_arrow_md."],
+img[src*="/sc_button_r_arrow_lg."],
+img[src*="/ps4_button_options."],
+img[src*="/ps4_button_options_sm."],
+img[src*="/ps4_button_options_md."],
+img[src*="/ps4_button_options_lg."],
+img[src*="/ps5_button_options."],
+img[src*="/ps5_button_options_sm."],
+img[src*="/ps5_button_options_md."],
+img[src*="/ps5_button_options_lg."],
+img[src*="/switchpro_button_plus."],
+img[src*="/switchpro_button_plus_sm."],
+img[src*="/switchpro_button_plus_md."],
+img[src*="/switchpro_button_plus_lg."] {
+  content: var(--nxe-START) !important;
+  object-fit: contain;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+.ControllerSupportIcon {
+  background: var(--nxe-PAD) center/contain no-repeat !important;
+  border-radius: 0 !important;
+  filter: drop-shadow(0 1px 2px #000c);
+}
+
+.ControllerSupportIcon > * {
+  visibility: hidden !important;
+}
+
+img.PillShapedIcon {
+  border-radius: 0 !important;
+  background: none !important;
+}
+
+/* osk glyphs */
+
+._45rH7-kY4P2uVEb3TxZhm ._3LsB3VZBjMjAp0RCa_3MGS ._3VtXfHDGV1q2LCVruVnHed {
+  background: var(--nxe-X) center/contain no-repeat !important;
+  opacity: 1 !important;
+}
+
+._45rH7-kY4P2uVEb3TxZhm ._3LsB3VZBjMjAp0RCa_3MGS ._3VtXfHDGV1q2LCVruVnHed > * {
+  visibility: hidden;
+}
+
+._45rH7-kY4P2uVEb3TxZhm .ia41Q17gwzFVtCRdemWuj ._3VtXfHDGV1q2LCVruVnHed {
+  background: var(--nxe-Y) center/contain no-repeat !important;
+  opacity: 1 !important;
+}
+
+._45rH7-kY4P2uVEb3TxZhm .ia41Q17gwzFVtCRdemWuj ._3VtXfHDGV1q2LCVruVnHed > * {
+  visibility: hidden;
+}
+
+._45rH7-kY4P2uVEb3TxZhm
+  :is(._2ye7YjL-n6ql_6UPyf5ptv, .iMZ3TXDTLXYVzU8Q7A9yP)
+  ._3VtXfHDGV1q2LCVruVnHed {
+  background: var(--nxe-LT) center/contain no-repeat !important;
+  opacity: 1 !important;
+}
+
+._45rH7-kY4P2uVEb3TxZhm
+  :is(._2ye7YjL-n6ql_6UPyf5ptv, .iMZ3TXDTLXYVzU8Q7A9yP)
+  ._3VtXfHDGV1q2LCVruVnHed
+  > * {
+  visibility: hidden;
+}
+
+._45rH7-kY4P2uVEb3TxZhm .IunX6VHNYj-i8dv5WJzpM ._3VtXfHDGV1q2LCVruVnHed {
+  background: var(--nxe-RT) center/contain no-repeat !important;
+  opacity: 1 !important;
+}
+
+._45rH7-kY4P2uVEb3TxZhm .IunX6VHNYj-i8dv5WJzpM ._3VtXfHDGV1q2LCVruVnHed > * {
+  visibility: hidden;
+}
