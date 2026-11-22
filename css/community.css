@@ -1,7 +1,7 @@
 body,
 body.flat_page,
 body.profile_page {
-  background: transparent !important;
+    background: transparent !important;
 }
 
 .responsive_page_frame,
@@ -12,8 +12,8 @@ body.profile_page {
 .no_header.profile_page,
 .profile_content,
 .profile_content.has_profile_background {
-  background: transparent !important;
-  background-image: none !important;
+    background: transparent !important;
+    background-image: none !important;
 }
 
 /* Profile header and avatar */
@@ -21,79 +21,79 @@ body.profile_page {
 .profile_header_bg,
 .profile_header_bg_texture,
 .profile_header {
-  background: linear-gradient(#ffffff2e, #00000059) !important;
-  border-radius: 8px !important;
-  box-shadow:
-    inset 0 0 0 1px #ffffff4d,
-    0 4px 12px #00000080 !important;
+    background: linear-gradient(#ffffff2e, #00000059) !important;
+    border-radius: 8px !important;
+    box-shadow:
+        inset 0 0 0 1px #ffffff4d,
+        0 4px 12px #00000080 !important;
 }
 
 .profile_header_bg {
-  margin: 10px !important;
+    margin: 10px !important;
 }
 
 .playerAvatar,
 .profile_avatar_frame {
-  border-radius: 4px !important;
+    border-radius: 4px !important;
 }
 
 .playerAvatar {
-  box-shadow:
-    0 0 0 2px #fff,
-    0 0 12px #b6e84a99 !important;
+    box-shadow:
+        0 0 0 2px #fff,
+        0 0 12px #b6e84a99 !important;
 }
 
 .actual_persona_name {
-  color: #fff !important;
-  text-shadow: 0 2px 3px #0008 !important;
+    color: #fff !important;
+    text-shadow: 0 2px 3px #0008 !important;
 }
 
 .profile_header_badgeinfo,
 .profile_header_badge,
 .favorite_badge,
 .persona_level_btn {
-  background: #00000040 !important;
-  border-radius: 6px !important;
-  box-shadow: inset 0 0 0 1px #ffffff26 !important;
+    background: #00000040 !important;
+    border-radius: 6px !important;
+    box-shadow: inset 0 0 0 1px #ffffff26 !important;
 }
 
 .friendPlayerLevel {
-  border-color: #a9d43c !important;
+    border-color: #a9d43c !important;
 }
 
 /* Profile actions and online status */
 
-.btn_profile_action > span,
+.btn_profile_action>span,
 .btn_profile_action,
-.profile_header_actions .btn_medium > span,
-.btn_grey_black > span,
-.btnv6_blue_hoverfade > span,
-.btn_darkblue_white_innerfade > span {
-  background: linear-gradient(#f6f8f6, #b4bfc3) !important;
-  color: #1c282e !important;
-  border-radius: 4px !important;
-  text-shadow: none !important;
-  box-shadow:
-    inset 0 1px 0 #fff,
-    0 1px 2px #0006 !important;
+.profile_header_actions .btn_medium>span,
+.btn_grey_black>span,
+.btnv6_blue_hoverfade>span,
+.btn_darkblue_white_innerfade>span {
+    background: linear-gradient(#f6f8f6, #b4bfc3) !important;
+    color: #1c282e !important;
+    border-radius: 4px !important;
+    text-shadow: none !important;
+    box-shadow:
+        inset 0 1px 0 #fff,
+        0 1px 2px #0006 !important;
 }
 
-.btn_profile_action:is(:hover, .gpfocus) > span,
+.btn_profile_action:is(:hover, .gpfocus)>span,
 .btn_profile_action:is(:hover, .gpfocus),
-.btn_green_white_innerfade > span,
-.btn_green_steamui > span {
-  background: linear-gradient(#a9d43c, #5a9612) !important;
-  color: #fff !important;
+.btn_green_white_innerfade>span,
+.btn_green_steamui>span {
+    background: linear-gradient(#a9d43c, #5a9612) !important;
+    color: #fff !important;
 }
 
 .profile_in_game.persona.online .profile_in_game_header,
 .persona.online,
 .online {
-  color: #c9f06a !important;
+    color: #c9f06a !important;
 }
 
 .profile_in_game.persona.offline .profile_in_game_header {
-  color: #cfd6d9 !important;
+    color: #cfd6d9 !important;
 }
 
 /* Profile showcases and comments */
@@ -114,82 +114,82 @@ body.profile_page {
 .profile_group,
 .profile_topfriends,
 .responsive_count_link_area {
-  background: linear-gradient(#ffffff1f, #00000047) !important;
-  border-radius: 6px !important;
-  box-shadow: inset 0 0 0 1px #ffffff2e !important;
+    background: linear-gradient(#ffffff1f, #00000047) !important;
+    border-radius: 6px !important;
+    box-shadow: inset 0 0 0 1px #ffffff2e !important;
 }
 
 .profile_customization_header,
 .profile_recentgame_header,
 .profile_comment_title,
 .commentthread_header {
-  background: linear-gradient(#f6f8f6, #b4bfc3) !important;
-  color: #1c282e !important;
-  border-radius: 4px 4px 0 0 !important;
-  text-transform: lowercase !important;
-  letter-spacing: 0 !important;
-  font-weight: 400 !important;
-  box-shadow: inset 0 1px 0 #fff !important;
+    background: linear-gradient(#f6f8f6, #b4bfc3) !important;
+    color: #1c282e !important;
+    border-radius: 4px 4px 0 0 !important;
+    text-transform: lowercase !important;
+    letter-spacing: 0 !important;
+    font-weight: 400 !important;
+    box-shadow: inset 0 1px 0 #fff !important;
 }
 
 .profile_customization_header *,
 .profile_recentgame_header *,
 .commentthread_header * {
-  color: #1c282e !important;
+    color: #1c282e !important;
 }
 
 .profile_count_link_total,
 .count_link_label {
-  color: #fff !important;
+    color: #fff !important;
 }
 
 .gpfocus,
 a.gpfocus,
 .profile_count_link:hover {
-  box-shadow:
-    0 0 0 3px #fff,
-    0 0 16px 3px #b6e84ad9 !important;
-  outline: none !important;
+    box-shadow:
+        0 0 0 3px #fff,
+        0 0 16px 3px #b6e84ad9 !important;
+    outline: none !important;
 }
 
 a:hover,
 a.whiteLink:hover {
-  color: #d8f58a !important;
+    color: #d8f58a !important;
 }
 
 /* Achievement showcase layout */
 
 .showcase_content_bg:has(> .showcase_achievement) {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  gap: 16px 20px !important;
-  padding: 14px !important;
-  align-items: flex-start !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 16px 20px !important;
+    padding: 14px !important;
+    align-items: flex-start !important;
 }
 
-.showcase_content_bg:has(> .showcase_achievement) > .showcase_achievement {
-  float: none !important;
-  margin: 0 !important;
-  flex: 0 0 64px !important;
+.showcase_content_bg:has(> .showcase_achievement)>.showcase_achievement {
+    float: none !important;
+    margin: 0 !important;
+    flex: 0 0 64px !important;
 }
 
-.showcase_content_bg:has(> .showcase_achievement) > :not(.showcase_achievement) {
-  flex: 0 0 100% !important;
+.showcase_content_bg:has(> .showcase_achievement)> :not(.showcase_achievement) {
+    flex: 0 0 100% !important;
 }
 
 .game_info_stats {
-  border-radius: 4px !important;
+    border-radius: 4px !important;
 }
 
 .achievement_progress_bar_ctn {
-  background: #0a0f1280 !important;
-  box-shadow:
-    inset 0 1px 2px #000a,
-    0 1px 0 #ffffff26 !important;
-  border-radius: 6px !important;
+    background: #0a0f1280 !important;
+    box-shadow:
+        inset 0 1px 2px #000a,
+        0 1px 0 #ffffff26 !important;
+    border-radius: 6px !important;
 }
 
 .game_info_achievement.plus_more {
-  background: #ffffff26 !important;
-  border-radius: 3px !important;
+    background: #ffffff26 !important;
+    border-radius: 3px !important;
 }

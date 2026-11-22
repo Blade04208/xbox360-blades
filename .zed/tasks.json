@@ -15,7 +15,7 @@
   },
   {
     "label": "Open Steam",
-    "command": "steam -dev -tenfoot -windowed -openalldevtools > /dev/null 2>&1 &",
+    "command": "steam -dev -tenfoot -windowed -openalldevtools &",
     "use_new_terminal": false,
     "allow_concurrent_runs": false,
     "reveal": "never",

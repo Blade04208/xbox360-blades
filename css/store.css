@@ -1,8 +1,8 @@
 body,
 body.v6,
 body.v7 {
-  background: transparent !important;
-  color: #f1ece6 !important;
+    background: transparent !important;
+    color: #f1ece6 !important;
 }
 
 .responsive_page_frame,
@@ -14,90 +14,85 @@ body.v7 {
 .home_ctn,
 .home_page_gutter,
 .home_cluster_ctn {
-  background: transparent !important;
-  background-image: none !important;
+    background: transparent !important;
+    background-image: none !important;
 }
 
 /* Navigation bars and dropdowns */
 
 [data-x360-bg="bar"] {
-  background: linear-gradient(#f6f8f6, #b4bfc3) top / 100% var(--x360-bar-h, 46px) no-repeat !important;
-  border-radius: 13.8px 13.8px 0 0 !important;
-  box-shadow: none !important;
+    background: linear-gradient(#f6f8f6, #b4bfc3) top / 100% var(--x360-bar-h, 46px) no-repeat !important;
+    border-radius: 13.8px 13.8px 0 0 !important;
+    box-shadow: none !important;
 }
 
 [data-x360-bg="drop"] {
-  background: linear-gradient(#e9edee, #b4bfc3) !important;
-  border-radius: 0 0 10px 10px !important;
-  box-shadow:
-    inset 0 0 0 1px #ffffffb3,
-    0 8px 18px #00000099 !important;
+    background: linear-gradient(#e9edee, #b4bfc3) !important;
+    border-radius: 0 0 10px 10px !important;
+    box-shadow:
+        inset 0 0 0 1px #ffffffb3,
+        0 8px 18px #00000099 !important;
 }
 
 [data-x360-bg="bar"],
 [data-x360-bg="bar"] * {
-  color: #1c282e !important;
-  fill: #1c282e !important;
-  text-shadow: none !important;
+    color: #1c282e !important;
+    fill: #1c282e !important;
+    text-shadow: none !important;
 }
 
-[data-x360-bg="bar"]
-  :is(a, button, [role="button"], [role="menuitem"]):is(.gpfocus, :hover, :focus-visible) {
-  background: linear-gradient(#a9d43c, #5a9612) !important;
-  border-radius: 4px !important;
-  box-shadow: inset 0 1px 0 #d9f59a !important;
+[data-x360-bg="bar"] :is(a, button, [role="button"], [role="menuitem"]):is(.gpfocus, :hover, :focus-visible) {
+    background: linear-gradient(#a9d43c, #5a9612) !important;
+    border-radius: 4px !important;
+    box-shadow: inset 0 1px 0 #d9f59a !important;
 }
 
-[data-x360-bg="bar"]
-  :is(a, button, [role="button"], [role="menuitem"]):is(.gpfocus, :hover, :focus-visible),
-[data-x360-bg="bar"]
-  :is(a, button, [role="button"], [role="menuitem"]):is(.gpfocus, :hover, :focus-visible)
-  * {
-  color: #fff !important;
-  fill: #fff !important;
+[data-x360-bg="bar"] :is(a, button, [role="button"], [role="menuitem"]):is(.gpfocus, :hover, :focus-visible),
+[data-x360-bg="bar"] :is(a, button, [role="button"], [role="menuitem"]):is(.gpfocus, :hover, :focus-visible) * {
+    color: #fff !important;
+    fill: #fff !important;
 }
 
 [data-x360-bg="solid"] {
-  background: linear-gradient(#3b464d, #1b2227) !important;
-  box-shadow:
-    inset 0 0 0 1px #ffffff40,
-    0 8px 22px #000000b3 !important;
+    background: linear-gradient(#3b464d, #1b2227) !important;
+    box-shadow:
+        inset 0 0 0 1px #ffffff40,
+        0 8px 22px #000000b3 !important;
 }
 
 [data-x360-bg="solid"],
 [data-x360-bg="solid"] * {
-  color: #f2f6f7 !important;
-  fill: #f2f6f7 !important;
+    color: #f2f6f7 !important;
+    fill: #f2f6f7 !important;
 }
 
-[data-x360-bg="solid"]
-  :is(a, button, [role="button"], [role="menuitem"]):is(.gpfocus, :hover, :focus-visible) {
-  background: linear-gradient(#a9d43c, #5a9612) !important;
-  border-radius: 4px !important;
-  box-shadow: inset 0 1px 0 #d9f59a !important;
+[data-x360-bg="solid"] :is(a, button, [role="button"], [role="menuitem"]):is(.gpfocus, :hover, :focus-visible) {
+    background: linear-gradient(#a9d43c, #5a9612) !important;
+    border-radius: 4px !important;
+    box-shadow: inset 0 1px 0 #d9f59a !important;
 }
 
 /* Store navigation and headings */
 
 .store_nav_bg,
 .store_nav {
-  background: linear-gradient(#f6f8f6, #b4bfc3) !important;
+    background: linear-gradient(#f6f8f6, #b4bfc3) !important;
 }
 
 .store_nav a,
-.store_nav .tab > span {
-  color: #1c282e !important;
+.store_nav .tab>span {
+    color: #1c282e !important;
 }
 
 h2,
 .home_page_content h2,
 .pageheader,
 .apphub_AppName {
-  color: #fff !important;
-  text-transform: none !important;
-  font-weight: 400 !important;
-  text-shadow: 0 2px 3px #0008 !important;
-  letter-spacing: 0 !important;
+    color: #fff !important;
+    text-transform: none !important;
+    font-weight: 400 !important;
+    text-shadow: 0 2px 3px #0008 !important;
+    letter-spacing: 0 !important;
 }
 
 /* Game cards */
@@ -115,121 +110,121 @@ h2,
 .game_area_description,
 .glance_ctn,
 .highlight_ctn {
-  background: linear-gradient(#ffffff26, #0000004d) !important;
-  border-radius: 6px !important;
-  box-shadow:
-    inset 0 0 0 1px #ffffff40,
-    0 4px 10px #00000080 !important;
-  overflow: hidden;
+    background: linear-gradient(#ffffff26, #0000004d) !important;
+    border-radius: 6px !important;
+    box-shadow:
+        inset 0 0 0 1px #ffffff40,
+        0 4px 10px #00000080 !important;
+    overflow: hidden;
 }
 
 .store_main_capsule .info,
 .tab_item_content,
 .tab_item .discount_block {
-  background: transparent !important;
+    background: transparent !important;
 }
 
 .store_main_capsule:is(.focus, .gpfocus, :hover),
 .tab_item:is(.focus, .gpfocus, :hover),
 a.gpfocus,
 .gpfocus {
-  box-shadow:
-    0 0 0 3px #fff,
-    0 0 18px 4px #b6e84ad9 !important;
-  outline: none !important;
+    box-shadow:
+        0 0 0 3px #fff,
+        0 0 18px 4px #b6e84ad9 !important;
+    outline: none !important;
 }
 
 /* Purchase buttons, discounts, and tags */
 
-.btn_green_steamui > span,
-.btn_green_white_innerfade > span,
-.btnv6_green_white_innerfade > span,
-.btn_addtocart .btn_green_steamui > span,
+.btn_green_steamui>span,
+.btn_green_white_innerfade>span,
+.btnv6_green_white_innerfade>span,
+.btn_addtocart .btn_green_steamui>span,
 .btn_green_steamui,
 .btnv6_green_white_innerfade {
-  background: linear-gradient(#a9d43c, #5a9612) !important;
-  color: #fff !important;
-  border-radius: 4px !important;
-  text-shadow: none !important;
-  box-shadow: inset 0 1px 0 #d9f59a !important;
+    background: linear-gradient(#a9d43c, #5a9612) !important;
+    color: #fff !important;
+    border-radius: 4px !important;
+    text-shadow: none !important;
+    box-shadow: inset 0 1px 0 #d9f59a !important;
 }
 
 .btnv6_blue_hoverfade,
-.btnv6_blue_hoverfade > span,
-.btn_blue_steamui > span,
-.btnv6_lightblue_blue > span,
-.btnv6_blue_blue_innerfade > span,
-.btn_medium > span {
-  background: linear-gradient(#f6f8f6, #b4bfc3) !important;
-  color: #1c282e !important;
-  border-radius: 4px !important;
-  text-shadow: none !important;
+.btnv6_blue_hoverfade>span,
+.btn_blue_steamui>span,
+.btnv6_lightblue_blue>span,
+.btnv6_blue_blue_innerfade>span,
+.btn_medium>span {
+    background: linear-gradient(#f6f8f6, #b4bfc3) !important;
+    color: #1c282e !important;
+    border-radius: 4px !important;
+    text-shadow: none !important;
 }
 
 .discount_pct,
 .discount_block .discount_pct {
-  background: linear-gradient(#a9d43c, #5a9612) !important;
-  color: #fff !important;
-  border-radius: 3px !important;
+    background: linear-gradient(#a9d43c, #5a9612) !important;
+    color: #fff !important;
+    border-radius: 3px !important;
 }
 
 .discount_final_price {
-  color: #d8f58a !important;
+    color: #d8f58a !important;
 }
 
 .discount_block {
-  background: transparent !important;
+    background: transparent !important;
 }
 
 .discount_prices {
-  background: #00000059 !important;
-  border-radius: 3px !important;
+    background: #00000059 !important;
+    border-radius: 3px !important;
 }
 
 .app_tag,
 .tab_item_top_tags .top_tag,
 .tag {
-  background: #ffffff24 !important;
-  color: #fff !important;
-  border-radius: 3px !important;
-  box-shadow: none !important;
+    background: #ffffff24 !important;
+    color: #fff !important;
+    border-radius: 3px !important;
+    box-shadow: none !important;
 }
 
 .game_review_summary.positive,
 .positive {
-  color: #c9f06a !important;
+    color: #c9f06a !important;
 }
 
 a:hover {
-  color: #d8f58a !important;
+    color: #d8f58a !important;
 }
 
 /* Nested Store navigation bars */
 
 [data-x360-bg="bar"]:has([data-x360-bg="bar"]) {
-  background: none !important;
-  box-shadow: none !important;
+    background: none !important;
+    box-shadow: none !important;
 }
 
 [data-x360-bg="bar"]:not(:has([data-x360-bg="bar"])) {
-  background: linear-gradient(#f6f8f6, #c9d2d6 58px, #b4bfc3) !important;
-  box-shadow:
-    inset 0 0 0 1px #ffffffb3,
-    0 6px 16px #00000080 !important;
-  border-radius: 13.8px 13.8px 10px 10px !important;
-  backdrop-filter: none !important;
+    background: linear-gradient(#f6f8f6, #c9d2d6 58px, #b4bfc3) !important;
+    box-shadow:
+        inset 0 0 0 1px #ffffffb3,
+        0 6px 16px #00000080 !important;
+    border-radius: 13.8px 13.8px 10px 10px !important;
+    backdrop-filter: none !important;
 }
 
 [data-x360-bg="bar"] [data-x360-bg="bar"]:has([data-x360-bg="bar"]) {
-  background: linear-gradient(#f6f8f6, #c9d2d6 58px, #b4bfc3) !important;
-  box-shadow:
-    inset 0 0 0 1px #ffffffb3,
-    0 6px 16px #00000080 !important;
-  border-radius: 13.8px 13.8px 10px 10px !important;
-  backdrop-filter: none !important;
+    background: linear-gradient(#f6f8f6, #c9d2d6 58px, #b4bfc3) !important;
+    box-shadow:
+        inset 0 0 0 1px #ffffffb3,
+        0 6px 16px #00000080 !important;
+    border-radius: 13.8px 13.8px 10px 10px !important;
+    backdrop-filter: none !important;
 }
 
 [data-x360-bg="bar"] [data-x360-bg="bar"] [data-x360-bg="bar"] {
-  background: none !important;
-  box-shadow: none !important;
+    background: none !important;
+    box-shadow: none !important;
 }

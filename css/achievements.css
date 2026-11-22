@@ -1,130 +1,130 @@
 ._3sjShm2vhP7aWXeim3vaHq:has(._3YTh805w3-xgPkHE_22XcA .mJ3Nu2ja1CSqf_qU1GD_b),
 html[data-nxe-achievement] ._3sjShm2vhP7aWXeim3vaHq {
-  position: fixed !important;
-  inset: auto auto 10vh 50% !important;
-  transform: translateX(-50%) !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  width: min(63.888889vh, 35.9375vw) !important;
-  height: auto !important;
-  aspect-ratio: 306.666667/87;
+    position: fixed !important;
+    inset: auto auto 10vh 50% !important;
+    transform: translateX(-50%) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: min(63.888889vh, 35.9375vw) !important;
+    height: auto !important;
+    aspect-ratio: 306.666667/87;
 }
 
 ._3YTh805w3-xgPkHE_22XcA:has(> canvas[data-xam]) {
-  inset: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  background: transparent !important;
-  overflow: visible !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    overflow: visible !important;
 }
 
-._3YTh805w3-xgPkHE_22XcA:has(> canvas[data-xam]) > :not(canvas) {
-  opacity: 0 !important;
-  animation: none !important;
+._3YTh805w3-xgPkHE_22XcA:has(> canvas[data-xam])> :not(canvas) {
+    opacity: 0 !important;
+    animation: none !important;
 }
 
 canvas[data-xam] {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
 }
 
 ._3YTh805w3-xgPkHE_22XcA:not(:has(> canvas[data-xam])) {
-  background: none !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-  overflow: visible !important;
-  padding: 0 !important;
-  left: 6px !important;
-  right: 6px !important;
+    background: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    left: 6px !important;
+    right: 6px !important;
 }
 
-._3YTh805w3-xgPkHE_22XcA:not(:has(> canvas[data-xam])) > * {
-  width: 100% !important;
-  height: 100% !important;
-  box-sizing: border-box !important;
-  display: flex !important;
-  align-items: center !important;
-  margin: 0 !important;
-  padding-inline: 12px 22px !important;
-  background: linear-gradient(#858c90, #474e52 46%, #23282b 54%, #32383b) !important;
-  border-radius: 999px !important;
-  box-shadow:
-    inset 0 0 0 2px #d5dbde,
-    inset 0 3px 0 #ffffff59,
-    0 3px 8px #000000a6 !important;
-  overflow: hidden !important;
-  color: #fff !important;
-  transform-origin: 50% 50%;
-  animation-name: x360-toast-in, x360-toast-out !important;
-  animation-duration: 340ms, 420ms !important;
-  animation-timing-function: cubic-bezier(0.2, 0.9, 0.3, 1.15), ease-in !important;
-  animation-delay: 0s, var(--toast-duration) !important;
-  animation-fill-mode: both, forwards !important;
+._3YTh805w3-xgPkHE_22XcA:not(:has(> canvas[data-xam]))>* {
+    width: 100% !important;
+    height: 100% !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding-inline: 12px 22px !important;
+    background: linear-gradient(#858c90, #474e52 46%, #23282b 54%, #32383b) !important;
+    border-radius: 999px !important;
+    box-shadow:
+        inset 0 0 0 2px #d5dbde,
+        inset 0 3px 0 #ffffff59,
+        0 3px 8px #000000a6 !important;
+    overflow: hidden !important;
+    color: #fff !important;
+    transform-origin: 50% 50%;
+    animation-name: x360-toast-in, x360-toast-out !important;
+    animation-duration: 340ms, 420ms !important;
+    animation-timing-function: cubic-bezier(0.2, 0.9, 0.3, 1.15), ease-in !important;
+    animation-delay: 0s, var(--toast-duration) !important;
+    animation-fill-mode: both, forwards !important;
 }
 
-._3YTh805w3-xgPkHE_22XcA:not(:has(> canvas[data-xam])) > *._1GxPxWKuAUyiMsPoBySwDE {
-  animation-name: x360-toast-in !important;
-  animation-duration: 340ms !important;
-  animation-delay: 0s !important;
+._3YTh805w3-xgPkHE_22XcA:not(:has(> canvas[data-xam]))>*._1GxPxWKuAUyiMsPoBySwDE {
+    animation-name: x360-toast-in !important;
+    animation-duration: 340ms !important;
+    animation-delay: 0s !important;
 }
 
-._3YTh805w3-xgPkHE_22XcA:not(:has(> canvas[data-xam])) > *.OuT5haPbvXgNIn3ap0pgg {
-  animation-name: x360-toast-out !important;
-  animation-duration: 420ms !important;
-  animation-delay: 0s !important;
+._3YTh805w3-xgPkHE_22XcA:not(:has(> canvas[data-xam]))>*.OuT5haPbvXgNIn3ap0pgg {
+    animation-name: x360-toast-out !important;
+    animation-duration: 420ms !important;
+    animation-delay: 0s !important;
 }
 
 @keyframes x360-toast-in {
-  from {
-    opacity: 0;
-    transform: scale(0.72);
-  }
+    from {
+        opacity: 0;
+        transform: scale(0.72);
+    }
 
-  to {
-    opacity: 1;
-    transform: none;
-  }
+    to {
+        opacity: 1;
+        transform: none;
+    }
 }
 
 @keyframes x360-toast-out {
-  from {
-    opacity: 1;
-  }
+    from {
+        opacity: 1;
+    }
 
-  to {
-    opacity: 0;
-  }
+    to {
+        opacity: 0;
+    }
 }
 
 ._3YTh805w3-xgPkHE_22XcA:not(:has(> canvas[data-xam])),
 ._3YTh805w3-xgPkHE_22XcA:not(:has(> canvas[data-xam])) * {
-  font-family: "NXE Convection", "Segoe UI", sans-serif !important;
-  text-shadow: 0 1px 1px #000a;
+    font-family: "NXE Convection", "Segoe UI", sans-serif !important;
+    text-shadow: 0 1px 1px #000a;
 }
 
-._3YTh805w3-xgPkHE_22XcA:not(:has(> canvas[data-xam])) > * * {
-  background-color: transparent !important;
-  background-image: none !important;
-  box-shadow: none !important;
-  border-color: transparent !important;
+._3YTh805w3-xgPkHE_22XcA:not(:has(> canvas[data-xam]))>* * {
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    border-color: transparent !important;
 }
 
 ._3YTh805w3-xgPkHE_22XcA:not(:has(> canvas[data-xam])) img {
-  border-radius: 50% !important;
-  box-shadow:
-    0 0 0 2px #a9d43c,
-    0 0 8px #b6e84a99 !important;
+    border-radius: 50% !important;
+    box-shadow:
+        0 0 0 2px #a9d43c,
+        0 0 8px #b6e84a99 !important;
 }
 
 ._3sjShm2vhP7aWXeim3vaHq:not(#nxe-toast-preview) {
-  position: fixed !important;
-  inset: auto auto 9vh 50% !important;
-  transform: translateX(-50%) !important;
-  margin: 0 !important;
+    position: fixed !important;
+    inset: auto auto 9vh 50% !important;
+    transform: translateX(-50%) !important;
+    margin: 0 !important;
 }

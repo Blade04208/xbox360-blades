@@ -1,12 +1,12 @@
 /* Store and Community */
 
 html {
-  background: transparent !important;
+    background: transparent !important;
 }
 
 body,
 body *:not(i):not([class*="icon"]) {
-  font-family: "NXE Convection", "Segoe UI", sans-serif !important;
+    font-family: "NXE Convection", "Segoe UI", sans-serif !important;
 }
 
 #global_header,
@@ -14,103 +14,101 @@ body *:not(i):not([class*="icon"]) {
 #footer_spacer,
 .responsive_header,
 .responsive_page_content_overlay {
-  display: none !important;
+    display: none !important;
 }
 
 /* Scrollbars */
 
 ::-webkit-scrollbar {
-  width: 10px;
-  background: #0000004d;
+    width: 10px;
+    background: #0000004d;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(90deg, #f6f8f6, #b4bfc3);
-  border-radius: 5px;
+    background: linear-gradient(90deg, #f6f8f6, #b4bfc3);
+    border-radius: 5px;
 }
 
 /* Surfaces applied by store.js */
 
 [data-x360-bg="glass"] {
-  background-color: #0a101438 !important;
-  background-image: none !important;
+    background-color: #0a101438 !important;
+    background-image: none !important;
 }
 
 [data-x360-bg="plate"] {
-  background: linear-gradient(#f6f8f6, #b4bfc3) !important;
-  color: #1c282e !important;
-  border-radius: 4px !important;
-  text-shadow: none !important;
-  box-shadow:
-    inset 0 1px 0 #fff,
-    0 1px 2px #0006 !important;
+    background: linear-gradient(#f6f8f6, #b4bfc3) !important;
+    color: #1c282e !important;
+    border-radius: 4px !important;
+    text-shadow: none !important;
+    box-shadow:
+        inset 0 1px 0 #fff,
+        0 1px 2px #0006 !important;
 }
 
 [data-x360-bg="plate"] *,
 [data-x360-bg="plate"][data-x360-fg] {
-  color: #1c282e !important;
-  fill: #1c282e !important;
+    color: #1c282e !important;
+    fill: #1c282e !important;
 }
 
 /* Focus outlines */
 
 [data-x360-bg="plate"]:is(:hover, .gpfocus, :focus-visible) {
-  background: linear-gradient(#a9d43c, #5a9612) !important;
+    background: linear-gradient(#a9d43c, #5a9612) !important;
 }
 
 [data-x360-bg="plate"]:is(:hover, .gpfocus, :focus-visible),
 [data-x360-bg="plate"]:is(:hover, .gpfocus, :focus-visible) * {
-  color: #fff !important;
-  fill: #fff !important;
+    color: #fff !important;
+    fill: #fff !important;
 }
 
 .gpfocus,
 a.gpfocus,
 :focus-visible {
-  outline: none !important;
-  border-radius: 4px !important;
+    outline: none !important;
+    border-radius: 4px !important;
 }
 
 :is(a, button, [role="button"]):focus-visible {
-  box-shadow:
-    0 0 0 2px #fff,
-    0 0 12px #b6e84a99 !important;
+    box-shadow:
+        0 0 0 2px #fff,
+        0 0 12px #b6e84a99 !important;
 }
 
-:is(.capsule, .store_capsule, .game_capsule, .tab_item, .small_cap, .cluster_capsule):is(
-  .gpfocus,
-  :focus-visible
-),
+:is(.capsule, .store_capsule, .game_capsule, .tab_item, .small_cap, .cluster_capsule):is(.gpfocus,
+    :focus-visible),
 a.gpfocus:has(img) {
-  border-radius: 6px !important;
+    border-radius: 6px !important;
 }
 
 [data-x360-bg="bar"] :is(.gpfocus, :focus-visible) {
-  box-shadow: none !important;
-  outline: none !important;
-  background: linear-gradient(#a9d43c, #5a9612) !important;
-  color: white !important;
-  border-radius: 4px !important;
+    box-shadow: none !important;
+    outline: none !important;
+    background: linear-gradient(#a9d43c, #5a9612) !important;
+    color: white !important;
+    border-radius: 4px !important;
 }
 
 [data-focusring="true"] {
-  border-radius: 6px !important;
-  outline: none !important;
-  box-shadow: none !important;
+    border-radius: 6px !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 /* Text contrast */
 
 body {
-  text-shadow: 0 1px 2px #000000a6;
+    text-shadow: 0 1px 2px #000000a6;
 }
 
 [data-x360-fg="dim"] {
-  color: #e3e9eb !important;
+    color: #e3e9eb !important;
 }
 
 [data-x360-fg="accent"] {
-  color: #d9f59a !important;
+    color: #d9f59a !important;
 }
 
 :is([data-x360-bg="bar"], [data-x360-bg="plate"], [data-x360-bg="drop"]),
@@ -119,108 +117,95 @@ input,
 textarea,
 select,
 button {
-  text-shadow: none !important;
+    text-shadow: none !important;
 }
 
-:is([data-x360-bg="bar"], [data-x360-bg="plate"]):not(:hover, .gpfocus, :focus-visible)
-  [data-x360-fg] {
-  color: #1c282e !important;
+:is([data-x360-bg="bar"], [data-x360-bg="plate"]):not(:hover, .gpfocus, :focus-visible) [data-x360-fg] {
+    color: #1c282e !important;
 }
 
 /* Navigation and interactive surfaces */
 
 .nav_item:is(.gpfocus, :focus-visible, :hover),
-[data-x360-bg="glass"]:is(a, button, [role="button"], [role="tab"], [role="menuitem"]):is(
-    .gpfocus,
-    :focus-visible
-  ):not(:has(img, video, picture)) {
-  background: linear-gradient(#a9d43c, #5a9612) !important;
-  box-shadow:
-    inset 0 1px 0 #d9f59a,
-    0 1px 3px #0006 !important;
-  border-radius: 4px !important;
+[data-x360-bg="glass"]:is(a, button, [role="button"], [role="tab"], [role="menuitem"]):is(.gpfocus,
+    :focus-visible):not(:has(img, video, picture)) {
+    background: linear-gradient(#a9d43c, #5a9612) !important;
+    box-shadow:
+        inset 0 1px 0 #d9f59a,
+        0 1px 3px #0006 !important;
+    border-radius: 4px !important;
 }
 
 .nav_item:is(.gpfocus, :focus-visible, :hover),
 .nav_item:is(.gpfocus, :focus-visible, :hover) *,
-[data-x360-bg="glass"]:is(a, button, [role="button"], [role="tab"], [role="menuitem"]):is(
-    .gpfocus,
-    :focus-visible
-  ):not(:has(img, video, picture)),
-[data-x360-bg="glass"]:is(a, button, [role="button"], [role="tab"], [role="menuitem"]):is(
-    .gpfocus,
-    :focus-visible
-  ):not(:has(img, video, picture))
-  * {
-  color: #fff !important;
+[data-x360-bg="glass"]:is(a, button, [role="button"], [role="tab"], [role="menuitem"]):is(.gpfocus,
+    :focus-visible):not(:has(img, video, picture)),
+[data-x360-bg="glass"]:is(a, button, [role="button"], [role="tab"], [role="menuitem"]):is(.gpfocus,
+    :focus-visible):not(:has(img, video, picture)) * {
+    color: #fff !important;
 }
 
 .nav_item.active:not(.gpfocus, :focus-visible, :hover) {
-  background: #ffffff2e !important;
-  color: #fff !important;
-  box-shadow: inset 0 1px 0 #ffffff40 !important;
-  border-radius: 4px !important;
+    background: #ffffff2e !important;
+    color: #fff !important;
+    box-shadow: inset 0 1px 0 #ffffff40 !important;
+    border-radius: 4px !important;
 }
 
 [data-x360-focus].gpfocus,
 [data-x360-hover]:hover {
-  background: linear-gradient(#a9d43c, #5a9612) !important;
-  box-shadow:
-    inset 0 1px 0 #d9f59a,
-    0 1px 3px #0006 !important;
-  border-radius: 4px !important;
+    background: linear-gradient(#a9d43c, #5a9612) !important;
+    box-shadow:
+        inset 0 1px 0 #d9f59a,
+        0 1px 3px #0006 !important;
+    border-radius: 4px !important;
 }
 
 [data-x360-focus].gpfocus,
 [data-x360-focus].gpfocus *,
 [data-x360-hover]:hover,
 [data-x360-hover]:hover * {
-  color: #fff !important;
-  fill: #fff !important;
-  text-shadow: none !important;
+    color: #fff !important;
+    fill: #fff !important;
+    text-shadow: none !important;
 }
 
 [data-x360-bg="fill"] {
-  background: linear-gradient(#b6e84a, #5a9612) !important;
+    background: linear-gradient(#b6e84a, #5a9612) !important;
 }
 
-:is(a, button)[class*="btn"] > span {
-  background: none !important;
-  box-shadow: none !important;
-  border: 0 !important;
+:is(a, button)[class*="btn"]>span {
+    background: none !important;
+    box-shadow: none !important;
+    border: 0 !important;
 }
 
 /* Page backgrounds, purchase controls, and spacing */
 
 [data-x360-bg="backdrop"],
 .game_page_background {
-  background-image: none !important;
-  background-color: transparent !important;
+    background-image: none !important;
+    background-color: transparent !important;
 }
 
-:is(
-  [class*="btn_green"],
-  [class*="btnv6_green"],
-  .btn_addtocart,
-  .btn_green_steamui,
-  .btn_green_white_innerfade
-),
-:is(
-    [class*="btn_green"],
+:is([class*="btn_green"],
     [class*="btnv6_green"],
     .btn_addtocart,
     .btn_green_steamui,
-    .btn_green_white_innerfade
-  )
-  * {
-  color: #fff !important;
-  text-shadow: 0 1px 1px #0006 !important;
+    .btn_green_white_innerfade),
+:is([class*="btn_green"],
+    [class*="btnv6_green"],
+    .btn_addtocart,
+    .btn_green_steamui,
+    .btn_green_white_innerfade) * {
+    color: #fff !important;
+    text-shadow: 0 1px 1px #0006 !important;
 }
 
 .search_released,
 .search_reviewscore,
 .search_price_discount_combined .discount_original_price {
-  color: #e3e9eb !important;
+    color: #e3e9eb !important;
 }
 
 .page_content_ctn,
@@ -228,9 +213,9 @@ button {
 .page_content,
 #search_resultsRows,
 .pagecontent {
-  padding-top: 10px !important;
-  padding-bottom: 28px !important;
-  box-sizing: border-box !important;
+    padding-top: 10px !important;
+    padding-bottom: 28px !important;
+    box-sizing: border-box !important;
 }
 
 .addfunds_area_purchase_game,
@@ -242,88 +227,72 @@ button {
 .steam_wallet_current,
 .wallet_balance_block,
 #wallet_balance_block {
-  padding-left: 14px !important;
-  padding-right: 14px !important;
-  box-sizing: border-box !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+    box-sizing: border-box !important;
 }
 
-:is([data-x360-focus].gpfocus, [data-x360-hover]:hover)
-  :not(img, video, canvas, [data-x360-bg="plate"]) {
-  background-color: transparent !important;
+:is([data-x360-focus].gpfocus, [data-x360-hover]:hover) :not(img, video, canvas, [data-x360-bg="plate"]) {
+    background-color: transparent !important;
 }
 
 .gpfocus :is(a, button)[class*="btn"],
 :is(a, button)[class*="btn"]:is(.gpfocus, :focus-visible) {
-  background: linear-gradient(#a9d43c, #5a9612) !important;
-  box-shadow:
-    inset 0 1px 0 #d9f59a,
-    0 0 0 2px #fff,
-    0 1px 3px #0006 !important;
+    background: linear-gradient(#a9d43c, #5a9612) !important;
+    box-shadow:
+        inset 0 1px 0 #d9f59a,
+        0 0 0 2px #fff,
+        0 1px 3px #0006 !important;
 }
 
 .gpfocus :is(a, button)[class*="btn"],
 .gpfocus :is(a, button)[class*="btn"] *,
 :is(a, button)[class*="btn"]:is(.gpfocus, :focus-visible),
 :is(a, button)[class*="btn"]:is(.gpfocus, :focus-visible) * {
-  color: #fff !important;
+    color: #fff !important;
 }
 
 /* Badges inside focused controls */
 
 [data-x360-bg="chip"],
 [data-x360-bg="chip"] *,
-[data-x360-bg="bar"]
-  :is(a, button, [role="button"], [role="menuitem"]):is(.gpfocus, :hover, :focus-visible)
-  [data-x360-bg="chip"],
-[data-x360-bg="bar"]
-  :is(a, button, [role="button"], [role="menuitem"]):is(.gpfocus, :hover, :focus-visible)
-  [data-x360-bg="chip"]
-  * {
-  color: #1c282e !important;
-  fill: #1c282e !important;
-  text-shadow: none !important;
+[data-x360-bg="bar"] :is(a, button, [role="button"], [role="menuitem"]):is(.gpfocus, :hover, :focus-visible) [data-x360-bg="chip"],
+[data-x360-bg="bar"] :is(a, button, [role="button"], [role="menuitem"]):is(.gpfocus, :hover, :focus-visible) [data-x360-bg="chip"] * {
+    color: #1c282e !important;
+    fill: #1c282e !important;
+    text-shadow: none !important;
 }
 
-:is(a, button, [role="button"], [role="menuitem"]):is(.gpfocus, :hover, :focus-visible)
-  [data-x360-bg="chip"],
+:is(a, button, [role="button"], [role="menuitem"]):is(.gpfocus, :hover, :focus-visible) [data-x360-bg="chip"],
 [data-x360-bg="chip"]:is(a, button, [role="button"]):is(.gpfocus, :hover, :focus-visible) {
-  background: linear-gradient(#a9d43c, #5a9612) !important;
-  box-shadow:
-    inset 0 1px 0 #d9f59a,
-    0 1px 3px #0006 !important;
+    background: linear-gradient(#a9d43c, #5a9612) !important;
+    box-shadow:
+        inset 0 1px 0 #d9f59a,
+        0 1px 3px #0006 !important;
 }
 
 /* The unused #x ID raises priority so focused badge text beats page styles. */
 
-[data-x360-bg="bar"]
-  :is(a, button, [role="button"], [role="menuitem"]):is(.gpfocus, :hover, :focus-visible)
-  [data-x360-bg="chip"]:not(#x),
-[data-x360-bg="bar"]
-  :is(a, button, [role="button"], [role="menuitem"]):is(.gpfocus, :hover, :focus-visible)
-  [data-x360-bg="chip"]:not(#x)
-  *,
-:is(a, button, [role="button"], [role="menuitem"]):is(.gpfocus, :hover, :focus-visible)
-  [data-x360-bg="chip"]:not(#x),
-:is(a, button, [role="button"], [role="menuitem"]):is(.gpfocus, :hover, :focus-visible)
-  [data-x360-bg="chip"]:not(#x)
-  *,
+[data-x360-bg="bar"] :is(a, button, [role="button"], [role="menuitem"]):is(.gpfocus, :hover, :focus-visible) [data-x360-bg="chip"]:not(#x),
+[data-x360-bg="bar"] :is(a, button, [role="button"], [role="menuitem"]):is(.gpfocus, :hover, :focus-visible) [data-x360-bg="chip"]:not(#x) *,
+:is(a, button, [role="button"], [role="menuitem"]):is(.gpfocus, :hover, :focus-visible) [data-x360-bg="chip"]:not(#x),
+:is(a, button, [role="button"], [role="menuitem"]):is(.gpfocus, :hover, :focus-visible) [data-x360-bg="chip"]:not(#x) *,
 [data-x360-bg="chip"]:is(a, button, [role="button"]):is(.gpfocus, :hover, :focus-visible):not(#x),
-[data-x360-bg="chip"]:is(a, button, [role="button"]):is(.gpfocus, :hover, :focus-visible):not(#x)
-  * {
-  color: #fff !important;
-  fill: #fff !important;
+[data-x360-bg="chip"]:is(a, button, [role="button"]):is(.gpfocus, :hover, :focus-visible):not(#x) * {
+    color: #fff !important;
+    fill: #fff !important;
 }
 
 :is([data-x360-focus].gpfocus, [data-x360-hover]:hover) [data-x360-bg="chip"]:not(#x) {
-  background: linear-gradient(#f6f8f6, #c9d2d6) !important;
+    background: linear-gradient(#f6f8f6, #c9d2d6) !important;
 }
 
 :is([data-x360-focus].gpfocus, [data-x360-hover]:hover) [data-x360-bg="chip"]:not(#x),
 :is([data-x360-focus].gpfocus, [data-x360-hover]:hover) [data-x360-bg="chip"]:not(#x) * {
-  color: #1c282e !important;
+    color: #1c282e !important;
 }
 
 .SteamChartsShell h1 {
-  margin-top: 28px !important;
-  margin-bottom: 14px !important;
+    margin-top: 28px !important;
+    margin-bottom: 14px !important;
 }

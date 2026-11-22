@@ -179,6 +179,10 @@
     nav = document.createElement("nav");
     nav.id = "x360-blades";
     nav.setAttribute("aria-label", "Dashboard blades");
+    const background = document.createElement("div");
+    background.className = "x360-blade-background";
+    background.setAttribute("aria-hidden", "true");
+    nav.append(background);
     jewel = document.createElement("div");
     jewel.className = "x360-jewel";
     nav.append(jewel);
