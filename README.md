@@ -2,6 +2,8 @@
 
 A [Millennium](https://docs.steambrew.app/themes/) theme for Steam Big Picture
 
+<img width="1895" height="937" alt="image" src="https://github.com/user-attachments/assets/1bcbd473-8e70-42fc-996e-d4fb453da5c5" />
+
 ## Build
 
 Requires Node.js 22+ and Millennium 3.4.0+
@@ -16,10 +18,10 @@ The build produces:
 ```text
 dist/
 ├── X360-Blades/             Installable theme folder
-└── x360-blades-sounds.star  Compiled plugin, including all ten WAVs
+└── x360-blades-sounds.star  Compiled plugin
 ```
 
-## Install
+### Installation
 
 1. Fully exit Steam.
 2. Copy `dist/X360-Blades/` into `<Steam>/steamui/skins/`.
