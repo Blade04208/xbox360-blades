@@ -4,17 +4,19 @@
 }
 
 .BasicUiRoot:not([data-x360-off]) {
-    --step: calc(42 * var(--u));
+    --wing: min(3.6vw, 48 * var(--u));
+    --step: calc(48 * var(--u));
     --x360-left-count: 1;
     --x360-right-count: 3;
-    --x360-left: calc(var(--x360-left-count) * var(--step) + 92 * var(--u));
-    --x360-right: calc(var(--x360-right-count) * var(--step) + 62 * var(--u));
-    --x360-top: calc(86 * var(--u));
-    --x360-foot: calc(46 * var(--u));
+    --x360-left: calc(var(--x360-left-count) * var(--step) + var(--wing) + 140 * var(--u));
+    --x360-right: calc(var(--x360-right-count) * var(--step) + var(--wing) + 100 * var(--u));
+    --x360-top: calc(100 * var(--u));
+    --x360-foot: calc(132 * var(--u));
     --x360-font: "NXE Convection", "Segoe UI", sans-serif;
-    --x360-bg-light: #ffd16a;
-    --x360-bg-mid: #e9a849;
-    --x360-bg-dark: #b87936;
+    --x360-bg-light: #ffd36a;
+    --x360-bg-mid: #efa631;
+    --x360-bg-dark: #a85415;
+    --x360-wing-tint: url("../assets/blades/blade_1_bgcolor.svg");
     --x360-jewel: url("../assets/blades/blade_1_jewel.svg");
     --x360-plate: linear-gradient(#f6f8f6, #b4bfc3);
     --x360-focus: linear-gradient(#a9d43c, #5a9612);
@@ -22,9 +24,10 @@
 }
 
 .BasicUiRoot:not([data-x360-off])[data-blade="2"] {
-    --x360-bg-light: #83eb4b;
-    --x360-bg-mid: #50ad3c;
-    --x360-bg-dark: #33783b;
+    --x360-bg-light: #70ff25;
+    --x360-bg-mid: #43bc21;
+    --x360-bg-dark: #166615;
+    --x360-wing-tint: url("../assets/blades/blade_2_bgcolor.svg");
     --x360-jewel: url("../assets/blades/blade_2_jewel.svg");
 }
 
@@ -32,13 +35,15 @@
     --x360-bg-light: #67b8fa;
     --x360-bg-mid: #347fc3;
     --x360-bg-dark: #214981;
+    --x360-wing-tint: url("../assets/blades/blade_3_bgcolor.svg");
     --x360-jewel: url("../assets/blades/blade_3_jewel.svg");
 }
 
 .BasicUiRoot:not([data-x360-off])[data-blade="4"] {
-    --x360-bg-light: #b88bfa;
-    --x360-bg-mid: #9066c8;
-    --x360-bg-dark: #60457e;
+    --x360-bg-light: #ac67ff;
+    --x360-bg-mid: #8750c4;
+    --x360-bg-dark: #523675;
+    --x360-wing-tint: url("../assets/blades/blade_4_bgcolor.svg");
     --x360-jewel: url("../assets/blades/blade_4_jewel.svg");
 }
 
@@ -46,6 +51,7 @@
     --x360-bg-light: #ffad59;
     --x360-bg-mid: #dc5339;
     --x360-bg-dark: #9b3033;
+    --x360-wing-tint: url("../assets/blades/blade_5_bgcolor.svg");
     --x360-jewel: url("../assets/blades/blade_5_jewel.svg");
 }
 
@@ -59,7 +65,7 @@
 #x360-blades button,
 #x360-blades .x360-jewel {
     position: absolute;
-    top: calc(-36 * var(--u));
+    top: calc((-70 + 15 * var(--depth, 0)) * var(--u));
     height: calc(940 * var(--u));
     width: calc(136 * var(--u));
     left: calc(var(--slot) * var(--step));
@@ -74,9 +80,10 @@
 }
 
 #x360-blades button {
-    background-image: url("../assets/blades/blade_grey_left.svg");
-    color: #2c3a46;
-    font: 400 calc(23 * var(--u)) / 1 var(--x360-font);
+    --rail: url("../assets/blades/blade_grey_left.svg");
+    background-image: var(--rail);
+    color: #282624;
+    font: 400 calc(26 * var(--u)) / 1 var(--x360-font);
     pointer-events: auto;
     cursor: pointer;
 }
@@ -84,12 +91,22 @@
 #x360-blades button[data-side="right"] {
     width: calc(161 * var(--u));
     left: calc(100% - var(--slot) * var(--step) - 161 * var(--u));
-    background-image: url("../assets/blades/blade_grey_rt.svg");
+    --rail: url("../assets/blades/blade_grey_rt.svg");
 }
 
 #x360-blades button[data-side="open"] {
-    background-image: url("../assets/blades/blade_grey_cut.svg");
+    --rail: url("../assets/blades/blade_grey_cut.svg");
     pointer-events: none;
+}
+
+#x360-blades button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--x360-wing-tint) center / 100% 100%;
+    mask: var(--rail) center / 100% 100%;
+    mix-blend-mode: multiply;
+    opacity: .10;
 }
 
 #x360-blades .x360-jewel {
@@ -115,32 +132,29 @@
     outline: none;
 }
 
-#x360-blades::before {
+#x360-blades::before,
+#x360-blades::after {
     content: "";
     position: absolute;
-    height: 100vh;
-    background: linear-gradient(to bottom, #aeaeae, #a2a2a2 55%, rgb(170 170 170 / 0.8), #adadad);
-    width: calc(50 * var(--u));
-    z-index: 0;
+    inset-block: 0;
+    width: calc(var(--wing) + 92 * var(--u));
+    z-index: 1;
+    mask: url("../assets/blades/wing-mask.svg") center / 100% 100%;
+    background: url("../assets/blades/wing-rim.svg") center / 100% 100%, linear-gradient(#d8d8d8f7, #eeeeeef4 46%, #bcbcbce8 77%, #edededef), var(--x360-wing-tint) center / 100% 100%;
+    pointer-events: none;
 }
 
-#x360-blades:has(>button:last-of-type[data-side="right"])::after {
-    content: "";
-    position: absolute;
+#x360-blades::after {
     right: 0;
-    height: 100vh;
-    background: linear-gradient(to bottom, #aeaeae, #a2a2a2 55%, rgb(170 170 170 / 0.8), #adadad);
-    width: calc(68 * var(--u));
-    z-index: 0;
+    transform: scaleX(-1);
 }
-
 
 #x360-blades .x360-title {
     position: absolute;
     left: calc(var(--x360-left) + 14 * var(--u));
-    top: calc(20 * var(--u));
-    font: 400 24px / 1 var(--x360-font);
-    text-transform: lowercase;
+    top: calc(50 * var(--u));
+    font: 400 calc(31 * var(--u)) / 1 var(--x360-font);
+    text-transform: capitalize;
     color: #fff;
     text-shadow: 0 calc(2 * var(--u)) calc(4 * var(--u)) #0006;
 }
@@ -176,31 +190,63 @@
 }
 
 .BasicUiRoot:not([data-x360-off]) #header {
-    top: 0px;
-    padding-top: calc(24 * var(--u)) !important;
+    top: 0;
+    left: calc(-40 * var(--u));
+    width: calc(100% + 80 * var(--u));
+    height: calc(92 * var(--u));
     min-height: 0 !important;
-    max-height: unset !important;
-    transition: opacity 0.15s !important;
-    box-shadow: inset 0px -5px 5px rgb(0 0 0 / 0.25);
-    background: rgb(0 0 0 / 0.25) !important;
-    border-radius: 0px 0px 60px 60px / 0px 0px 100% 100%;
-    backdrop-filter: none;
-    box-sizing: content-box;
-    padding: calc(24* var(--u)) calc(5* var(--u)) calc(5* var(--u));
-    left: calc(-27* var(--u));
-    width: calc(100% + 41* var(--u));
-    border-radius: 0px 0px 60px 60px / 0px 0px 100% 100%;
-
+    max-height: none !important;
+    box-sizing: border-box;
+    padding: calc(35 * var(--u)) calc(12 * var(--u)) 0 !important;
+    background: transparent !important;
+    box-shadow: none;
 }
 
 .BasicUiRoot:not([data-x360-off]) #Footer {
-    left: calc(var(--x360-left) - 30 * var(--u)) !important;
+    left: calc(var(--x360-left) - 40 * var(--u)) !important;
+    right: calc(var(--x360-right) - 40 * var(--u)) !important;
+    width: auto;
     height: var(--x360-foot) !important;
-    box-shadow: inset 0px 5px 5px rgb(0 0 0 / 0.25);
-    background: rgb(0 0 0 / 0.25);
-    border-radius: 60px 60px 0px 0px / 100% 100% 0px 0px;
-    backdrop-filter: none;
-    width: calc(100% - 266* var(--u));
+    box-sizing: border-box;
+    align-items: flex-start;
+    backdrop-filter: none !important;
+    padding-top: calc(10 * var(--u));
+    background: transparent;
+    box-shadow: none;
+}
+
+#x360-blades .x360-bands {
+    position: absolute;
+    inset: 0 calc(var(--x360-right) - 70 * var(--u)) 0 calc(var(--x360-left) - 80 * var(--u));
+    --band-corner: calc(62 * var(--u));
+    --band-rise: calc(62 * var(--u));
+}
+
+.BasicUiRoot[data-blade="4"]:not([data-x360-detail]) #x360-blades .x360-bands {
+    right: calc(var(--x360-right) - 54 * var(--u));
+}
+
+.x360-bands::before,
+.x360-bands::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+}
+
+.x360-bands::before {
+    top: 0;
+    height: calc(92 * var(--u));
+    border-radius: 0 0 var(--band-corner) var(--band-corner) / 0 0 var(--band-rise) var(--band-rise);
+    background: linear-gradient(#53220020, #35140038);
+    box-shadow: inset 0 -2px 3px #0004;
+}
+
+.x360-bands::after {
+    bottom: 0;
+    height: var(--x360-foot);
+    background: linear-gradient(#0001, #1115);
+    border-radius: var(--band-corner) var(--band-corner) 0 0 / var(--band-rise) var(--band-rise) 0 0;
+    box-shadow: inset 0 2px 3px #0005;
 }
 
 .BasicUiRoot:not([data-x360-off]),
@@ -292,26 +338,13 @@
 }
 
 .BasicUiRoot:not([data-x360-off]) .PagedSettingsDialog_PageListColumn {
-    background: #ffffff12 !important;
-    box-shadow: inset -1px 0 0 #ffffff26 !important;
+    background: transparent !important;
+    box-shadow: none !important;
     padding: calc(8 * var(--u)) !important;
 }
 
 .BasicUiRoot:not([data-x360-off]) .PagedSettingDialog_ContentColumn {
     background: transparent !important;
-}
-
-.BasicUiRoot:not([data-x360-off]) .PagedSettingsDialog_PageListItem.Active {
-    background: var(--x360-plate) !important;
-    color: #1c282e !important;
-    box-shadow:
-        inset 0 1px 0 #fff,
-        0 1px 2px #0006 !important;
-}
-
-.BasicUiRoot:not([data-x360-off]) .PagedSettingsDialog_PageListItem:is(.gpfocus, :hover) {
-    background: var(--x360-focus) !important;
-    color: #fff !important;
 }
 
 .BasicUiRoot:not([data-x360-off]) .Field.HighlightOnFocus:is(.gpfocus, .gpfocuswithin) {
@@ -354,21 +387,45 @@
 }
 
 .BasicUiRoot:not([data-x360-off]) .PagedSettingsDialog_PageListItem {
-    margin-bottom: calc(3 * var(--u)) !important;
-    border-radius: calc(4 * var(--u)) !important;
-    background: #ffffff1a !important;
-    box-shadow: inset 0 1px 0 #ffffff33 !important;
-    color: #eef2f3 !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: inset 0 -2px #2c124c66, inset -1px 0 #29154066 !important;
+    color: #170f22 !important;
+    font-size: clamp(16px, 2.9vh, 27px);
 }
 
-.BasicUiRoot:not([data-x360-off]) .PagedSettingsDialog_PageListItem.Active * {
-    color: #1c282e !important;
-    fill: #1c282e;
+.BasicUiRoot:not([data-x360-off]) .PagedSettingsDialog_PageListItem * {
+    color: inherit !important;
 }
 
-.BasicUiRoot:not([data-x360-off]) .PagedSettingsDialog_PageListItem:is(.gpfocus, :hover) * {
-    color: #fff !important;
-    fill: #fff;
+.BasicUiRoot:not([data-x360-off]) .PagedSettingsDialog_PageListItem.Active {
+    background: linear-gradient(90deg, #ffffff78, #ffffff40 70%, transparent) !important;
+}
+
+.BasicUiRoot:not([data-x360-off]) .PagedSettingsDialog_PageListItem:is(.gpfocus, :focus-visible, :hover) {
+    background: linear-gradient(100deg, #fff7, #fffd 52%, #fff5 78%, #fff1) !important;
+    box-shadow: inset 0 0 0 1px #321a5080, 0 1px 3px #30103d66 !important;
+}
+
+.BasicUiRoot .PagedSettingsDialog_PageListItem[id$="/system"] {
+    --x360-setting-icon: url("../assets/dashboard/ico_32x_console.png");
+}
+
+.BasicUiRoot .PagedSettingsDialog_PageListItem[id$="/internet"] {
+    --x360-setting-icon: url("../assets/dashboard/ico_32x_network.png");
+}
+
+.BasicUiRoot .PagedSettingsDialog_PageListItem[id$="/family"] {
+    --x360-setting-icon: url("../assets/dashboard/ico_32x_parentalControl.png");
+}
+
+.BasicUiRoot:not([data-x360-off]) .PagedSettingsDialog_PageListItem:is([id$="/system"], [id$="/internet"], [id$="/family"]) .PageListItem_Icon {
+    background: var(--x360-setting-icon) center / contain no-repeat;
+}
+
+.BasicUiRoot:not([data-x360-off]) .PagedSettingsDialog_PageListItem:is([id$="/system"], [id$="/internet"], [id$="/family"]) .PageListItem_Icon svg {
+    opacity: 0;
 }
 
 .BasicUiRoot:not([data-x360-off]) .Field.Background {
@@ -381,9 +438,6 @@
     display: none !important;
 }
 
-.BasicUiRoot:not([data-x360-off]) #header.HeaderOpaque {
-    background: transparent !important;
-}
 
 .BasicUiRoot:not([data-x360-off]) :is(.Body.ScrollContainer, .AppDetailsRoot) {
     background: transparent !important;
@@ -466,7 +520,7 @@
 }
 
 .BasicUiRoot:not([data-x360-off]) .BackgroundGlass {
-    background: #0a0f1280 !important;
+    background: #050605d9 !important;
 }
 
 .BasicUiRoot:not([data-x360-off]):has(.BackgroundGlass.Visible) #header {
@@ -474,8 +528,9 @@
     pointer-events: none !important;
 }
 
-.BasicUiRoot:not([data-x360-off]) #header .SearchAndTitleContainer {
-    flex: 0 0 calc(270 * var(--u)) !important;
+.BasicUiRoot:not([data-x360-off]) #header .SearchAndTitleContainer.ShowingSearch {
+    flex: 0 0 calc(44 * var(--u)) !important;
+    min-width: 0 !important;
     margin-left: auto !important;
     border-radius: calc(20 * var(--u)) !important;
     overflow: hidden !important;
@@ -484,11 +539,15 @@
     align-self: center !important;
 }
 
+.BasicUiRoot:not([data-x360-off]) #header .SearchAndTitleContainer.ShowingSearch:is(.gpfocus, .gpfocuswithin, :focus-within, :has(.gpfocus)) {
+    flex-basis: min(24vw, calc(230 * var(--u))) !important;
+}
+
 .BasicUiRoot:not([data-x360-off]) #header .SearchFieldBackground {
     border-radius: calc(20 * var(--u)) !important;
     inset: 0 !important;
     width: auto !important;
-    opacity: 1 !important;
+    opacity: 0 !important;
     transform: none !important;
     background: linear-gradient(#0d131899, #0d131859) !important;
     box-shadow:
@@ -515,78 +574,11 @@
     color: #fff !important;
 }
 
-.BasicUiRoot:not([data-x360-off]) #header .SearchAndTitleContainer:is(.gpfocus, .gpfocuswithin, :focus-within) .SearchFieldBackground {
+.BasicUiRoot:not([data-x360-off]) #header .SearchAndTitleContainer.ShowingSearch:is(.gpfocus, .gpfocuswithin, :focus-within, :has(.gpfocus)) .SearchFieldBackground {
+    opacity: 1 !important;
     box-shadow:
         inset 0 0 0 2px #fff,
         0 0 calc(10 * var(--u)) #b6e84acc !important;
-}
-
-#x360-blades .x360-card {
-    display: none;
-}
-
-.BasicUiRoot:not([data-x360-off])[data-blade="1"] #x360-blades .x360-card:not([hidden]) {
-    display: flex;
-    position: absolute;
-    align-items: center;
-    box-sizing: border-box;
-    color: #1c282e;
-    font: 400 calc(17 * var(--u)) / 1.1 var(--x360-font);
-    width: calc(230 * var(--u));
-    left: var(--x360-left);
-    top: calc(86 * var(--u));
-    max-width: none;
-    height: var(--x360-card-h);
-    padding: calc(28 * var(--u)) calc(8 * var(--u)) calc(8 * var(--u)) calc(8 * var(--u));
-    gap: calc(14 * var(--u));
-    z-index: 2;
-    border: 2px solid rgb(0 0 0 / 0.25);
-    border-radius: calc(7 * var(--u));
-    box-shadow:
-        inset 0px 0px 5px 5px rgb(255 255 255 / 0.25);
-    right: var(--x360-right);
-    overflow: hidden;
-}
-
-#x360-blades .x360-card img {
-    height: 100%;
-    aspect-ratio: 1;
-    object-fit: cover;
-    box-shadow:
-        0 0 0 1px #6f7b82,
-        0 1px 3px #0006;
-}
-
-#x360-blades .x360-card-text {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    inset: 0 0 auto 0;
-    background: linear-gradient(to right, rgb(0 0 0 / 0.25) 50%, transparent);
-    padding: calc(2 * var(--u));
-}
-
-#x360-blades .x360-card-name {
-    max-width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-#x360-blades .x360-card-status {
-    display: flex;
-    align-items: center;
-}
-
-#x360-blades .x360-card-stat[hidden] {
-    display: none;
-}
-
-#x360-blades .x360-card-stat {
-    display: flex;
-    gap: calc(6 * var(--u));
-    line-height: 1;
 }
 
 .BasicUiRoot:not([data-x360-off]) :is(.DialogButton, .Tab, .MenuButton):is(.gpfocus, :focus-visible) {
@@ -615,11 +607,6 @@
     visibility: hidden !important;
 }
 
-.BasicUiRoot:not([data-x360-off])[data-blade="1"] {
-    --x360-card-h: calc(84 * var(--u));
-    --x360-top: calc(86 * var(--u) + var(--x360-card-h));
-}
-
 .BasicUiRoot:not([data-x360-off])[data-blade="2"] .GamepadTabbedPage:not(.OverlayPinnedView)>.TabHeaderRowWrapper {
     position: fixed !important;
     top: 0 !important;
@@ -630,7 +617,7 @@
     visibility: visible !important;
     opacity: 1 !important;
     padding-top: 0 !important;
-    background: linear-gradient(#466344, #263e2b) !important;
+    background: linear-gradient(#25511de0, #163310f2) !important;
     border-radius: calc(14 * var(--u)) calc(14 * var(--u)) 0 0;
     box-shadow: 0 3px 8px #0005 !important;
 }
@@ -654,6 +641,7 @@
     inherits: false;
     initial-value: 0%;
 }
+
 .BasicUiRoot:not([data-x360-off]) #x360-blades {
     isolation: isolate;
     background: radial-gradient(ellipse at 47% 46%, var(--x360-bg-mid) 24%, var(--x360-bg-dark) 115%);
@@ -785,13 +773,13 @@
 .BasicUiRoot:not([data-x360-off]) #x360-blades>button,
 .BasicUiRoot:not([data-x360-off]) #x360-blades>.x360-jewel {
     left: 0 !important;
-    transform: translateX(calc(var(--slot) * var(--step)));
+    transform: translateX(calc(var(--wing) + var(--slot) * var(--step)));
     transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1) !important;
     will-change: transform;
 }
 
 .BasicUiRoot:not([data-x360-off]) #x360-blades>button[data-side="right"] {
-    transform: translateX(calc(100vw - var(--slot) * var(--step) - 161 * var(--u)));
+    transform: translateX(calc(100vw - var(--wing) - var(--slot) * var(--step) - 161 * var(--u)));
 }
 
 /* Page transitions */
@@ -813,4 +801,96 @@
 #x360-blades button[data-x360-hot] span {
     color: #0c1319;
     text-shadow: 0 1px 0 #fff;
+}
+
+
+.BasicUiRoot:not([data-x360-off])[data-x360-detail] {
+    --x360-left: 8vw;
+    --x360-right: 8vw;
+}
+
+.BasicUiRoot[data-x360-detail] #x360-blades .x360-bands {
+    inset-inline: 0;
+}
+
+.BasicUiRoot[data-x360-detail] .x360-bands::before,
+.BasicUiRoot[data-x360-detail] .x360-bands::after {
+    border-radius: 0;
+}
+
+.BasicUiRoot:has(#header .ShowingTitle) .x360-title {
+    display: none;
+}
+
+.BasicUiRoot[data-x360-detail] #x360-blades> :is(button, .x360-jewel),
+.BasicUiRoot[data-x360-detail] #x360-blades::before {
+    translate: calc(-100% - var(--wing) - 4 * var(--step)) 0;
+}
+
+.BasicUiRoot[data-x360-detail] #x360-blades>button[data-side="right"],
+.BasicUiRoot[data-x360-detail] #x360-blades::after {
+    translate: calc(100% + var(--wing) + 4 * var(--step)) 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .BasicUiRoot:not([data-x360-off]) #x360-blades> :is(button, .x360-jewel) {
+        transition: transform .3s cubic-bezier(.2, .7, .2, 1), translate .38s ease-in-out !important;
+    }
+
+    #x360-blades::before,
+    #x360-blades::after {
+        transition: translate .38s ease-in-out;
+    }
+
+    #x360-blades .x360-bands {
+        transition: left .38s ease-in-out, right .38s ease-in-out;
+    }
+
+    .BasicUiRoot[data-x360-detail]:not([data-x360-off]) :is(#Main, #header, #Footer) {
+        animation: x360-content-reveal .19s ease-out .29s backwards;
+    }
+}
+
+@keyframes x360-content-reveal {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.BasicUiRoot:not([data-x360-off]) #Footer .ActionButtonLegend:has(img:is([src*="button_a."], [src*="button_b."])) {
+    flex-direction: row-reverse;
+}
+
+@media (min-aspect-ratio: 4/3) {
+    .BasicUiRoot:not([data-x360-off]) #Footer .FooterLegend:has(img[src*="button_b."]):has(img[src*="button_a."]) {
+        position: relative;
+        padding-inline-end: calc(116 * var(--u));
+        overflow: visible;
+    }
+
+    .BasicUiRoot:not([data-x360-off]) #Footer .FooterLegend:has(img[src*="button_b."]):has(img[src*="button_a."]) .ActionButtonLegend:has(img:is([src*="button_a."], [src*="button_b."])) {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .BasicUiRoot:not([data-x360-off]) #Footer .FooterLegend:has(img[src*="button_a."]) .ActionButtonLegend:has(img[src*="button_b."]) {
+        transform: translateX(calc(-19 * var(--u)));
+    }
+
+    .BasicUiRoot:not([data-x360-off]) #Footer .FooterLegend:has(img[src*="button_b."]) .ActionButtonLegend:has(img[src*="button_a."]) {
+        transform: translateY(94%);
+    }
+}
+
+
+@media (max-aspect-ratio: 4/3) {
+    .BasicUiRoot:not([data-x360-off]) {
+        --wing: 0px;
+        --step: 3.2vw;
+    }
 }

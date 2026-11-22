@@ -10,7 +10,7 @@
       web: "https://store.steampowered.com/",
       match: /^\/(store|steamweb|browser)/,
     },
-    { label: "home", color: 1, path: "/library/home", match: /^\/library\/home/ },
+    { label: "Steam Big Picture", color: 1, path: "/library/home", match: /^\/library\/home/ },
     { label: "games", color: 2, path: "/library", match: /^\/library/ },
     { label: "media", color: 3, path: "/media/grid", match: /^\/media/ },
     { label: "system", color: 4, path: "/settings", match: /^\/settings/ },
@@ -51,6 +51,7 @@
     [...nav.querySelectorAll("button")].forEach((button, i) => {
       const side = i < index ? "left" : i > index ? "right" : "open";
       button.dataset.side = side;
+      button.style.setProperty("--depth", String(Math.abs(i - index)));
       button.style.setProperty("--slot", String(side === "right" ? BLADES.length - 1 - i : i));
       button.tabIndex = side === "open" ? -1 : 0;
       if (side === "open") button.setAttribute("aria-current", "page");
@@ -100,65 +101,8 @@
       if (root) delete root.dataset.x360Slide;
       try {
         window.dispatchEvent(new Event("resize"));
-      } catch {}
+      } catch { }
     }, 420);
-  }
-  let card;
-  // gamercard
-  function buildCard() {
-    card = document.createElement("div");
-    card.className = "x360-card";
-    card.innerHTML =
-      '<div class="x360-card-text"><div class="x360-card-name"></div></div>' +
-      '<img alt=""><div class="x360-card-stats"><div class="x360-card-status"></div><div class="x360-card-stat" data-stat="games"><blades-num></blades-num><span>games</span></div><div class="x360-card-stat" data-stat="installed"><blades-num></blades-num><span>installed</span></div></div>';
-    nav.append(card);
-  }
-  function setText(element, text) {
-    if (element.textContent !== text) element.textContent = text;
-  }
-  function updateCard() {
-    if (!card) return;
-    const host = window.opener || window;
-    let name = "";
-    try {
-      const ui = host.friendStore?.m_FriendsUIFriendStore;
-      const self = ui?.self || ui?.m_self;
-      name = self?.display_name || self?.persona?.m_strPlayerName || "";
-      if (!name) {
-        const id = String(host.App?.m_CurrentUser?.strSteamID || "");
-        const cached = host.friendStore?.m_mapPlayerCache?.get?.(id);
-        name = cached?.persona?.m_strPlayerName || cached?.display_name || "";
-      }
-    } catch {}
-    const avatar = document.querySelector("#header_profile img")?.src || "";
-    const img = card.querySelector("img");
-    if (avatar && img.src !== avatar) img.src = avatar;
-    setText(card.querySelector(".x360-card-name"), name);
-    card.hidden = !avatar;
-    card.querySelector(".x360-card-name").hidden = !name;
-    const state = document.querySelector("#header_profile .CurrentUserAvatar")?.classList;
-    const status = state?.contains("ingame")
-      ? "in-game"
-      : state?.contains("online")
-        ? "online"
-        : state?.contains("away")
-          ? "away"
-          : "offline";
-    const statusEl = card.querySelector(".x360-card-status");
-    if (statusEl) {
-      setText(statusEl, status);
-      statusEl.dataset.state = status;
-    }
-    const counts = {};
-    try {
-      counts.games = host.collectionStore?.allGamesCollection?.allApps?.length;
-      counts.installed = host.collectionStore?.localGamesCollection?.allApps?.length;
-    } catch {}
-    for (const el of card.querySelectorAll(".x360-card-stat")) {
-      const value = counts[el.dataset.stat];
-      el.hidden = !Number.isFinite(value);
-      if (Number.isFinite(value)) setText(el.querySelector("blades-num"), String(value));
-    }
   }
   function bladeAt(x, fallback) {
     let best = fallback,
@@ -182,7 +126,10 @@
     const background = document.createElement("div");
     background.className = "x360-blade-background";
     background.setAttribute("aria-hidden", "true");
-    nav.append(background);
+    const bands = document.createElement("div");
+    bands.className = "x360-bands";
+    bands.setAttribute("aria-hidden", "true");
+    nav.append(background, bands);
     jewel = document.createElement("div");
     jewel.className = "x360-jewel";
     nav.append(jewel);
@@ -211,7 +158,6 @@
     title = document.createElement("div");
     title.className = "x360-title";
     nav.append(title);
-    buildCard();
   }
   function sync() {
     const found = document.querySelector(".BasicUiRoot");
@@ -230,15 +176,23 @@
       !!getGamepadWindow()?.BViewingPreLoginRoute?.();
     root.toggleAttribute("data-x360-off", off);
     nav.hidden = off;
-    if (!off) {
-      updateCard();
-    }
+    const detail = /^\/library\/app\/[^/]+/.test(path) ||
+      !!root.querySelector("#header .SearchAndTitleContainer.ShowingTitle");
+    root.toggleAttribute("data-x360-detail", detail);
+    nav.inert = detail;
     const next = getBladeIndex(path);
     if (performance.now() < pendingUntil) {
       if (next === active) pendingUntil = 0;
       return;
     }
-    if (next >= 0 && next !== active) selectBlade(next);
+    // A detail page takes its library color, but the rails retract from their current slots.
+    if (detail && active >= 0) {
+      const blade = BLADES[next >= 0 ? next : active];
+      root.dataset.blade = String(blade.color);
+      if (title.textContent !== blade.label) title.textContent = blade.label;
+      return;
+    }
+    if (next >= 0 && (next !== active || root.dataset.blade !== String(BLADES[next].color))) selectBlade(next);
     else if (active < 0) selectBlade(1);
   }
   function ensureDefs(doc) {
@@ -261,6 +215,9 @@
         continue;
       }
       if (!doc?.head || doc === document) continue;
+      const menu = doc.querySelector("#MainNavMenuContainer .Menu");
+      const clock = document.querySelector("#header .Clock")?.textContent;
+      if (menu && clock && menu.dataset.x360Time !== clock) menu.dataset.x360Time = clock;
       ensureDefs(doc);
       addStylesheets(doc, POPUP_SHEETS);
       doc.documentElement.dataset.x360Popup = (doc.title || "").replace(/_uid\d+$/, "");

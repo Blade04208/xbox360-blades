@@ -38,34 +38,45 @@ html[data-x360-popup] #browserview_target,
         linear-gradient(#000, #000) left / calc(100% - var(--guide-rail-width) + 1px) 100% no-repeat,
         url("../assets/guide/panel-mask.svg") right var(--guide-rail-top) / var(--guide-rail-width) var(--guide-rail-height) no-repeat;
 }
+
 #MainNavMenuContainer .Menu {
     box-sizing: border-box !important;
-        height: 100% !important;
-        margin-block: 0 !important;
-        padding: calc(108 * var(--u)) var(--guide-rail-width) calc(70 * var(--u)) min(calc(10 * var(--u)), 10px) !important;
-        justify-content: flex-start !important;
-        overflow-y: auto !important;
-    }
-    
-    #MainNavMenuContainer .ItemOuter {
-        flex: 0 0 auto !important;
-        width: 100% !important;
-        min-width: 0 !important;
+    height: 100% !important;
+    margin-block: 0 !important;
+    padding: calc(108 * var(--u)) var(--guide-rail-width) calc(70 * var(--u)) min(12%, calc(72 * var(--u))) !important;
+    justify-content: flex-start !important;
+    overflow-y: auto !important;
+}
+
+#MainNavMenuContainer .Menu[data-x360-time]::before {
+    content: attr(data-x360-time);
+    position: absolute;
+    top: calc(65 * var(--u));
+    right: calc(var(--guide-rail-width) + 10 * var(--u));
+    color: #fff;
+    font-size: calc(21 * var(--u));
+    pointer-events: none;
+}
+
+#MainNavMenuContainer .ItemOuter {
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    min-width: 0 !important;
 }
 
 #MainNavMenuContainer .Item {
     box-sizing: border-box !important;
-        width: 100% !important;
-        height: calc(49 * var(--u)) !important;
-        min-height: 32px !important;
-        max-height: none !important;
-        margin: 0 !important;
-        padding: 0 4px !important;
-        border-radius: 4px !important;
-        background: transparent !important;
-        box-shadow: inset 0 -1px #0003, 0 1px #fff5 !important;
-        color: #171a15 !important;
-        transform: none !important;
+    width: 100% !important;
+    height: calc(49 * var(--u)) !important;
+    min-height: 32px !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 4px !important;
+    border-radius: 4px !important;
+    background: transparent !important;
+    box-shadow: inset 0 -1px #0003, 0 1px #fff5 !important;
+    color: #171a15 !important;
+    transform: none !important;
 }
 
 #MainNavMenuContainer .ActiveDot,
@@ -78,20 +89,20 @@ html[data-x360-popup] #browserview_target,
 #MainNavMenuContainer .Item .ItemLabel,
 #MainNavMenuContainer .Item .ItemLabel * {
     color: #171a15 !important;
-        font-size: min(calc(19 * var(--u)), 18px) !important;
-        font-weight: 400 !important;
-        text-shadow: none !important;
-    }
-    
-    #MainNavMenuContainer .ItemLabel {
-        min-width: 0 !important;
-    }
-    
-    #MainNavMenuContainer .ItemIcon {
-        flex-shrink: 0 !important;
-        width: min(calc(24 * var(--u)), 24px) !important;
-        height: min(calc(24 * var(--u)), 24px) !important;
-        margin-right: min(calc(8 * var(--u)), 8px) !important;
+    font-size: min(calc(19 * var(--u)), 18px) !important;
+    font-weight: 400 !important;
+    text-shadow: none !important;
+}
+
+#MainNavMenuContainer .ItemLabel {
+    min-width: 0 !important;
+}
+
+#MainNavMenuContainer .ItemIcon {
+    flex-shrink: 0 !important;
+    width: min(calc(24 * var(--u)), 24px) !important;
+    height: min(calc(24 * var(--u)), 24px) !important;
+    margin-right: min(calc(8 * var(--u)), 8px) !important;
 }
 
 #MainNavMenuContainer .Item svg {
@@ -172,15 +183,15 @@ html[data-x360-popup] #browserview_target,
     .chatEntryControls,
     [class*="FriendsListTab"],
     [class*="chatRoom"],
-        [class*="ChatRoom"]) {
-            background: transparent !important;
-            background-image: none !important;
+    [class*="ChatRoom"]) {
+    background: transparent !important;
+    background-image: none !important;
 }
 
 #QuickAccess-Menu .PanelOuterNav,
 #QuickAccess-Menu .PanelOuterNav * {
     color: #1c282e !important;
-        text-shadow: none !important;
+    text-shadow: none !important;
 }
 
 #QuickAccess-Menu .PanelOuterNav :is(.richPresenceLabel,
@@ -188,8 +199,8 @@ html[data-x360-popup] #browserview_target,
     .gameName,
     [class*="Description"],
     [class*="Timestamp"],
-        [class*="timestamp"]) {
-            color: #4a5a63 !important;
+    [class*="timestamp"]) {
+    color: #4a5a63 !important;
 }
 
 #QuickAccess-Menu .PanelOuterNav .friend.online :is(.playerName, .gameName, .richPresenceLabel) {
@@ -203,7 +214,7 @@ html[data-x360-popup] #browserview_target,
 #QuickAccess-Menu .PanelOuterNav [class*="Separator"],
 #QuickAccess-Menu .PanelOuterNav hr {
     background: #7c8a91 !important;
-        border-color: #7c8a91 !important;
+    border-color: #7c8a91 !important;
 }
 
 #QuickAccess-Menu :is(.friendsListContainer, .FriendsListContent, .friendlist) {
@@ -212,40 +223,40 @@ html[data-x360-popup] #browserview_target,
 
 #QuickAccess-Menu .Tabs {
     position: absolute !important;
-        top: calc(-25 * var(--u)) !important;
-        left: calc(-0.4 * var(--guide-rail-width) - 14px) !important;
-        width: 28px !important;
-        height: 100vh !important;
-        margin: 0 !important;
-        background: transparent !important;
-        box-shadow: none !important;
-        justify-content: center;
-    }
-    
-    #QuickAccess-Menu .Tabs::after {
-        display: none !important;
-    }
-    
-    #QuickAccess-Menu .TabList {
-        width: 100% !important;
-        margin: 0 !important;
+    top: calc(-25 * var(--u)) !important;
+    left: calc(-0.4 * var(--guide-rail-width) - 14px) !important;
+    width: 28px !important;
+    height: 100vh !important;
+    margin: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    justify-content: center;
+}
+
+#QuickAccess-Menu .Tabs::after {
+    display: none !important;
+}
+
+#QuickAccess-Menu .TabList {
+    width: 100% !important;
+    margin: 0 !important;
 }
 
 #QuickAccess-Menu .Tabs .Tab {
     --tab-height: calc(52 * var(--u));
-        width: 28px !important;
-        min-height: 32px !important;
-        flex: 0 0 auto !important;
-        background: transparent !important;
-        color: #33454e !important;
-        border-radius: 3px !important;
-        transform: none !important;
+    width: 28px !important;
+    min-height: 32px !important;
+    flex: 0 0 auto !important;
+    background: transparent !important;
+    color: #33454e !important;
+    border-radius: 3px !important;
+    transform: none !important;
 }
 
 #QuickAccess-Menu .Tabs .Tab svg {
     width: 20px !important;
-        height: 20px !important;
-        color: #33454e !important;
+    height: 20px !important;
+    color: #33454e !important;
 }
 
 #QuickAccess-Menu .Tabs .Tab.Selected svg,
@@ -265,8 +276,8 @@ html[data-x360-popup] #browserview_target,
 #QuickAccess-Menu [class*="PanelSectionTitle"],
 #QuickAccess-Menu [class*="SectionTitle"] {
     text-transform: none !important;
-        font-weight: 400 !important;
-        letter-spacing: 0 !important;
+    font-weight: 400 !important;
+    letter-spacing: 0 !important;
 }
 
 #QuickAccess-Menu .Field,
@@ -277,31 +288,31 @@ html[data-x360-popup] #browserview_target,
 #QuickAccess-Menu .PanelOuterNav :is(.Field:is(.gpfocus, .gpfocuswithin),
     .friend:is(.gpfocus, :hover),
     .favoriteElement.gpfocus,
-        .Focusable.gpfocus:not(.DialogButton):not(.chatTextarea):not(textarea)) {
-            background: var(--guide-focus) !important;
-            box-shadow:
-                inset 0 0 0 1px #73796c, inset 0 0 0 2px #fff9,
-                inset 0 3px 2px #83c52b !important;
-            border-radius: 4px !important;
+    .Focusable.gpfocus:not(.DialogButton):not(.chatTextarea):not(textarea)) {
+    background: var(--guide-focus) !important;
+    box-shadow:
+        inset 0 0 0 1px #73796c, inset 0 0 0 2px #fff9,
+        inset 0 3px 2px #83c52b !important;
+    border-radius: 4px !important;
 }
 
 #QuickAccess-Menu .PanelOuterNav :is(.Field:is(.gpfocus, .gpfocuswithin),
     .friend:is(.gpfocus, :hover),
     .favoriteElement.gpfocus,
-        .Focusable.gpfocus:not(.DialogButton):not(.chatTextarea):not(textarea)),
-        #QuickAccess-Menu .PanelOuterNav :is(.Field:is(.gpfocus, .gpfocuswithin),
+    .Focusable.gpfocus:not(.DialogButton):not(.chatTextarea):not(textarea)),
+#QuickAccess-Menu .PanelOuterNav :is(.Field:is(.gpfocus, .gpfocuswithin),
     .friend:is(.gpfocus, :hover),
     .favoriteElement.gpfocus,
-        .Focusable.gpfocus:not(.DialogButton):not(.chatTextarea):not(textarea)) * {
-            color: #171a15 !important;
+    .Focusable.gpfocus:not(.DialogButton):not(.chatTextarea):not(textarea)) * {
+    color: #171a15 !important;
 }
 
 html[data-x360-popup="QuickAccess"] .DialogButton {
     background: linear-gradient(#5d6b73, #353f45) !important;
-        border-radius: 4px !important;
-        box-shadow:
-            inset 0 1px 0 #ffffff59,
-            0 1px 2px #0006 !important;
+    border-radius: 4px !important;
+    box-shadow:
+        inset 0 1px 0 #ffffff59,
+        0 1px 2px #0006 !important;
 }
 
 html[data-x360-popup="QuickAccess"] .DialogButton,
@@ -315,20 +326,20 @@ html[data-x360-popup="QuickAccess"] .DialogButton:is(.gpfocus, :hover) {
 
 #QuickAccess-Menu .favoriteElement .playerName {
     margin-left: 0 !important;
-        text-align: left !important;
-        font-size: 16px !important;
-        flex: 1 1 auto !important;
-        width: auto !important;
-        max-width: none !important;
-        min-width: 0 !important;
-        white-space: nowrap !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
+    text-align: left !important;
+    font-size: 16px !important;
+    flex: 1 1 auto !important;
+    width: auto !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
 }
 
 #QuickAccess-Menu .favoriteElement :is(.friend, .labelHolder) {
     flex: 1 1 auto !important;
-        min-width: 0 !important;
+    min-width: 0 !important;
 }
 
 #QuickAccess-Menu .favoriteElement .statusAndName {
@@ -342,8 +353,8 @@ html[data-x360-popup="QuickAccess"] .DialogButton:is(.gpfocus, :hover) {
 
 #QuickAccess-Menu :is(.chatHeader, .ChatTab) {
     background: linear-gradient(#dfe5e7, #a3b0b6) !important;
-        border: 0 !important;
-        box-shadow: 0 1px 0 #6f7b82 !important;
+    border: 0 !important;
+    box-shadow: 0 1px 0 #6f7b82 !important;
 }
 
 #QuickAccess-Menu .ChatTab {
@@ -358,10 +369,10 @@ html[data-x360-popup="QuickAccess"] .DialogButton:is(.gpfocus, :hover) {
 #QuickAccess-Menu .chatTextarea,
 #QuickAccess-Menu .chatEntry textarea {
     background: #ffffffd9 !important;
-        border-radius: 4px !important;
-        box-shadow:
-            inset 0 0 0 1px #7c8a91,
-            inset 0 2px 3px #0003 !important;
+    border-radius: 4px !important;
+    box-shadow:
+        inset 0 0 0 1px #7c8a91,
+        inset 0 2px 3px #0003 !important;
 }
 
 #QuickAccess-Menu .chatTextarea:is(.gpfocus, :focus-within) {
@@ -387,8 +398,8 @@ html[data-x360-popup="QuickAccess"] .DialogButton:is(.gpfocus, :hover) {
     .PagedSettingsDialog_PageListItem.Active:not(.gpfocus):not(:hover),
     .MenuButton:not(.gpfocus):not(:hover),
     .DialogButton:not(.gpfocus):not(:hover),
-        .Tab.Selected:not(.gpfocus)) svg :is(path, circle, rect, polygon, ellipse) {
-            fill: url(#x360-gloss-dark) currentColor !important;
+    .Tab.Selected:not(.gpfocus)) svg :is(path, circle, rect, polygon, ellipse) {
+    fill: url(#x360-gloss-dark) currentColor !important;
 }
 
 :is(#MainNavMenuContainer .Item:not(.gpfocus):not(:hover),
@@ -397,8 +408,8 @@ html[data-x360-popup="QuickAccess"] .DialogButton:is(.gpfocus, :hover) {
     .PagedSettingsDialog_PageListItem.Active:not(.gpfocus):not(:hover),
     .MenuButton:not(.gpfocus):not(:hover),
     .DialogButton:not(.gpfocus):not(:hover),
-        .Tab.Selected:not(.gpfocus)) svg {
-            filter: drop-shadow(0 1px 0 #ffffffd9) !important;
+    .Tab.Selected:not(.gpfocus)) svg {
+    filter: drop-shadow(0 1px 0 #ffffffd9) !important;
 }
 
 #QuickAccess-Menu .PanelOuterNav :is(.gpfocus, .gpfocuswithin.Field, .DialogButton) svg :is(path, circle, rect, polygon, ellipse) {
@@ -413,9 +424,9 @@ html[data-x360-popup="QuickAccess"] .DialogButton:is(.gpfocus, :hover) {
 
 :is(.BasicUiRoot:not([data-x360-off]), html[data-x360-popup]) .Toggle .ToggleRail {
     background: linear-gradient(#20282d, #4a565d) !important;
-        box-shadow:
-            inset 0 1px 2px #000a,
-            0 1px 0 #ffffff40 !important;
+    box-shadow:
+        inset 0 1px 2px #000a,
+        0 1px 0 #ffffff40 !important;
 }
 
 :is(.BasicUiRoot:not([data-x360-off]), html[data-x360-popup]) .Toggle.On .ToggleRail,
@@ -425,15 +436,15 @@ html[data-x360-popup="QuickAccess"] .DialogButton:is(.gpfocus, :hover) {
 
 :is(.BasicUiRoot:not([data-x360-off]), html[data-x360-popup]) .Toggle .ToggleSwitch {
     background: linear-gradient(#ffffff, #b4bfc3) !important;
-        box-shadow:
-            0 1px 3px #000a,
-            inset 0 1px 0 #fff !important;
+    box-shadow:
+        0 1px 3px #000a,
+        inset 0 1px 0 #fff !important;
 }
 
 :is(.BasicUiRoot:not([data-x360-off]), html[data-x360-popup]) .Toggle.gpfocus .ToggleRail {
     box-shadow:
-            0 0 0 2px #fff,
-            0 0 10px #b6e84acc !important;
+        0 0 0 2px #fff,
+        0 0 10px #b6e84acc !important;
 }
 
 /* Context menus and dialogs */
@@ -451,17 +462,17 @@ html[data-x360-popup="QuickAccess"] .DialogButton:is(.gpfocus, :hover) {
 
 :is(.BasicUiRoot:not([data-x360-off]), html[data-x360-popup]) .contextMenuContents {
     background: transparent !important;
-        padding: 4px !important;
-        color: #1c282e !important;
-        max-height: calc(78vh - 16px) !important;
-        box-sizing: border-box !important;
+    padding: 4px !important;
+    color: #1c282e !important;
+    max-height: calc(78vh - 16px) !important;
+    box-sizing: border-box !important;
 }
 
 :is(.BasicUiRoot:not([data-x360-off]), html[data-x360-popup]) .contextMenuItem {
     background: transparent !important;
-        color: #1c282e !important;
-        border-radius: 4px !important;
-        box-shadow: none !important;
+    color: #1c282e !important;
+    border-radius: 4px !important;
+    box-shadow: none !important;
 }
 
 :is(.BasicUiRoot:not([data-x360-off]), html[data-x360-popup]) .contextMenuItem:is(.gpfocus, :focus-visible, :hover) {
@@ -472,9 +483,9 @@ html[data-x360-popup="QuickAccess"] .DialogButton:is(.gpfocus, :hover) {
 
 :is(.BasicUiRoot:not([data-x360-off]), html[data-x360-popup]) .ContextMenuSeparator {
     background: #7f9098 !important;
-        height: 1px !important;
-        margin: 5px 8px !important;
-        box-shadow: 0 1px #fff !important;
+    height: 1px !important;
+    margin: 5px 8px !important;
+    box-shadow: 0 1px #fff !important;
 }
 
 :is(.BasicUiRoot:not([data-x360-off]), html[data-x360-popup]) .ModalOverlayBackground {
@@ -483,16 +494,16 @@ html[data-x360-popup="QuickAccess"] .DialogButton:is(.gpfocus, :hover) {
 
 :is(.BasicUiRoot:not([data-x360-off]), html[data-x360-popup]) .GamepadDialogOverlay input {
     background: #f7faf8 !important;
-        color: #1c282e !important;
-        border: 1px solid #81949c !important;
-        border-radius: 5px !important;
-        box-shadow: inset 0 1px 3px #0002 !important;
+    color: #1c282e !important;
+    border: 1px solid #81949c !important;
+    border-radius: 5px !important;
+    box-shadow: inset 0 1px 3px #0002 !important;
 }
 
 :is(.BasicUiRoot:not([data-x360-off]), html[data-x360-popup]) .BasicContextMenuContainer {
     max-height: 78vh !important;
-        box-sizing: border-box !important;
-        min-width: 320px;
+    box-sizing: border-box !important;
+    min-width: 320px;
 }
 
 :is(.BasicUiRoot:not([data-x360-off]), html[data-x360-popup]) .contextMenuItem .FilterContextOptionLabel {
@@ -501,10 +512,10 @@ html[data-x360-popup="QuickAccess"] .DialogButton:is(.gpfocus, :hover) {
 
 :is(.BasicUiRoot:not([data-x360-off]), html[data-x360-popup]) .contextMenuContents .SearchBar {
     position: sticky !important;
-        top: 0;
-        z-index: 2;
-        background: #d8e0e2;
-        padding-bottom: 6px;
+    top: 0;
+    z-index: 2;
+    background: #d8e0e2;
+    padding-bottom: 6px;
 }
 
 :is(.BasicUiRoot:not([data-x360-off]), html[data-x360-popup]) .GamepadDialogOverlay .CompatFilterDialog {
@@ -520,7 +531,7 @@ html[data-x360-popup="QuickAccess"] .DialogButton:is(.gpfocus, :hover) {
 
 :is(.BasicUiRoot:not([data-x360-off]), html[data-x360-popup]) .CompatFilterDialog .FilterBucket {
     background: #ffffff50 !important;
-        border-radius: 4px;
+    border-radius: 4px;
 }
 
 :is(.BasicUiRoot:not([data-x360-off]), html[data-x360-popup]) .GamepadDialogOverlay input::placeholder {
@@ -536,14 +547,14 @@ html[data-x360-popup="QuickAccess"] .DialogButton:is(.gpfocus, :hover) {
 
 :is(.BasicUiRoot:not([data-x360-off]), html[data-x360-popup]) [data-x360-bg="glass"] {
     background: #ffffff14 !important;
-        box-shadow: inset 0 1px 0 #ffffff26 !important;
+    box-shadow: inset 0 1px 0 #ffffff26 !important;
 }
 
 :is(.BasicUiRoot:not([data-x360-off]), html[data-x360-popup]) [data-x360-bg="track"] {
     background: #0a0f1280 !important;
-        box-shadow:
-            inset 0 1px 2px #000a,
-            0 1px 0 #ffffff26 !important;
+    box-shadow:
+        inset 0 1px 2px #000a,
+        0 1px 0 #ffffff26 !important;
 }
 
 :is(.BasicUiRoot:not([data-x360-off]), html[data-x360-popup]) [data-x360-bg="fill"] {
@@ -552,18 +563,18 @@ html[data-x360-popup="QuickAccess"] .DialogButton:is(.gpfocus, :hover) {
 
 :is(.BasicUiRoot:not([data-x360-off]), html[data-x360-popup]) [data-x360-bg="plate"] {
     background: linear-gradient(#a9d43c, #5a9612) !important;
-        color: #fff !important;
-        box-shadow:
-            inset 0 1px 0 #d9f59a,
-            0 1px 2px #0006 !important;
+    color: #fff !important;
+    box-shadow:
+        inset 0 1px 0 #d9f59a,
+        0 1px 2px #0006 !important;
 }
 
 :is(.BasicUiRoot:not([data-x360-off]), html[data-x360-popup]) [data-x360-bg="field"] {
     background: #0d131873 !important;
-        color: #fff !important;
-        box-shadow:
-            inset 0 0 0 1px #ffffff33,
-            inset 0 2px 3px #0006 !important;
+    color: #fff !important;
+    box-shadow:
+        inset 0 0 0 1px #ffffff33,
+        inset 0 2px 3px #0006 !important;
 }
 
 :is(.BasicUiRoot:not([data-x360-off]), html[data-x360-popup]) [data-x360-fg="accent"] {
@@ -595,8 +606,8 @@ html[data-x360-popup="QuickAccess"] .DialogButton:is(.gpfocus, :hover) {
 .BasicUiRoot:not([data-x360-off]) :is(.DownloadsPage,
     .GamepadSearch,
     .ControllerConfiguratorMain,
-        .ControllerConfiguratorMain .TopSection) {
-            background: transparent !important;
+    .ControllerConfiguratorMain .TopSection) {
+    background: transparent !important;
 }
 
 /* Modal form controls */
@@ -607,9 +618,9 @@ html[data-x360-popup="QuickAccess"] .DialogButton:is(.gpfocus, :hover) {
     .KeyCap *,
     .Toggle *,
     input,
-        textarea) {
-            color: #1c282e !important;
-            text-shadow: none !important;
+    textarea) {
+    color: #1c282e !important;
+    text-shadow: none !important;
 }
 
 .BasicUiRoot:not([data-x360-off]) .FullModalOverlay :is(.DialogContent, .CompatFilterDialog) .DialogHeader,
@@ -651,7 +662,7 @@ html[data-x360-popup="QuickAccess"] .DialogButton:is(.gpfocus, :hover) {
 
 .BasicUiRoot:not([data-x360-off]) .CompatFilterOptions .Panel:has(> .RadioButton) {
     border-radius: 4px !important;
-        margin-bottom: 2px !important;
+    margin-bottom: 2px !important;
 }
 
 .BasicUiRoot:not([data-x360-off]) .FullModalOverlay .CompatFilterOptions .Panel:has(> .RadioButton):is(.Active, .gpfocus) {
@@ -667,22 +678,22 @@ html[data-x360-popup="QuickAccess"] .DialogButton:is(.gpfocus, :hover) {
 
 .BasicUiRoot:not([data-x360-off]) .FullModalOverlay .RadioButton {
     background: linear-gradient(#ffffff, #cfd9dd) !important;
-        border-color: #6f7b82 !important;
-        box-shadow: inset 0 1px 2px #0004 !important;
+    border-color: #6f7b82 !important;
+    box-shadow: inset 0 1px 2px #0004 !important;
 }
 
 .BasicUiRoot:not([data-x360-off]) .FullModalOverlay :is(.Active, .Selected)>.RadioButton,
 .BasicUiRoot:not([data-x360-off]) .FullModalOverlay .RadioButton:is(.Active, .Selected) {
     background: radial-gradient(circle, #3c6a08 0 36%, #ffffff 42%) !important;
-        border-color: #3c6a08 !important;
+    border-color: #3c6a08 !important;
 }
 
 .BasicUiRoot:not([data-x360-off]) .FullModalOverlay .DialogCheckbox {
     background: linear-gradient(#ffffff, #cfd9dd) !important;
-        box-shadow:
-            inset 0 0 0 1px #6f7b82,
-            inset 0 1px 2px #0003 !important;
-        border-radius: 3px !important;
+    box-shadow:
+        inset 0 0 0 1px #6f7b82,
+        inset 0 1px 2px #0003 !important;
+    border-radius: 3px !important;
 }
 
 .BasicUiRoot:not([data-x360-off]) .FullModalOverlay .DialogCheckbox:is(.Active, .Checked) {
@@ -696,7 +707,7 @@ html[data-x360-popup="QuickAccess"] .DialogButton:is(.gpfocus, :hover) {
 .BasicUiRoot:not([data-x360-off]) .DialogButton:not(.gpfocus):not(:hover):not(:focus-visible),
 .BasicUiRoot:not([data-x360-off]) .DialogButton:not(.gpfocus):not(:hover):not(:focus-visible) * {
     color: #1c282e !important;
-        text-shadow: none !important;
+    text-shadow: none !important;
 }
 
 .BasicUiRoot:not([data-x360-off]) .DialogButton:not(.gpfocus):not(:hover):not(:focus-visible) :is(.Details, .DropDownLabelTitle + div, [class*="Description"]) {
@@ -714,12 +725,12 @@ html[data-x360-popup="QuickAccess"] .DialogButton:is(.gpfocus, :hover) {
 
 #QuickAccess-Menu :is(.favoriteElement, .friendsContainer, .groupList) .friend {
     padding-right: 12px !important;
-        box-sizing: border-box !important;
+    box-sizing: border-box !important;
 }
 
 #QuickAccess-Menu .friendlist .groupName {
     padding-right: 12px !important;
-        box-sizing: border-box !important;
+    box-sizing: border-box !important;
 }
 
 #QuickAccess-Menu .TabBumper img {
@@ -748,9 +759,9 @@ html[data-x360-popup="QuickAccess"] .DialogButton:is(.gpfocus, :hover) {
     .KeyCap *,
     .Toggle *,
     input,
-        textarea) {
-            color: #fff !important;
-            text-shadow: none !important;
+    textarea) {
+    color: #fff !important;
+    text-shadow: none !important;
 }
 
 /* Context menu text and disabled states */
@@ -785,8 +796,8 @@ html[data-x360-popup="QuickAccess"] .DialogButton:is(.gpfocus, :hover) {
 
 .BasicUiRoot:not([data-x360-off]) .DownloadsPage .TopSection:has(> .Section.Empty) {
     height: auto !important;
-        min-height: calc(56 * var(--u)) !important;
-        flex: 0 0 auto !important;
+    min-height: calc(56 * var(--u)) !important;
+    flex: 0 0 auto !important;
 }
 
 .BasicUiRoot:not([data-x360-off]) .DownloadsPage .TopSection>.Section.Empty {
@@ -801,7 +812,7 @@ html[data-x360-popup="QuickAccess"] .DialogButton:is(.gpfocus, :hover) {
 
 .BasicUiRoot:not([data-x360-off]) .DownloadsPage .RemoteClientManagementBackground {
     background: #0a0f1280 !important;
-        border-radius: 4px !important;
+    border-radius: 4px !important;
 }
 
 :is(.BasicUiRoot:not([data-x360-off]), html[data-x360-popup]) :is([data-x360-bg="focus"], [data-x360-hover]:hover) :not(img, video, canvas, .Toggle, .Toggle *, .DialogButton) {
