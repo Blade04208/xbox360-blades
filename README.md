@@ -2,7 +2,7 @@
 
 A [Millennium](https://docs.steambrew.app/themes/) theme for Steam Big Picture
 
-<img width="1895" height="937" alt="image" src="https://github.com/user-attachments/assets/1bcbd473-8e70-42fc-996e-d4fb453da5c5" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f3c80742-1882-4a59-b1f3-7d502819aa36" />
 
 ## Build
 
