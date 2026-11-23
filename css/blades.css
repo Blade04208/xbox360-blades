@@ -720,7 +720,6 @@
     }
 }
 
-/* 320 and 625 out of 990 frames in the extracted glow track. */
 @keyframes x360-bg-glow {
     32.3% {
         background-position: 30% 32%;

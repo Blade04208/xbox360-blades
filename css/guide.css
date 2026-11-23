@@ -819,7 +819,6 @@ html[data-x360-popup="QuickAccess"] .DialogButton:is(.gpfocus, :hover) {
     background-color: transparent !important;
 }
 
-/* Keep dynamically classified Quick Access controls in the Guide palette. */
 #QuickAccess-Menu .PanelOuterNav :is([data-x360-bg="focus"], [data-x360-hover]:hover, .DialogButton:is(.gpfocus, :hover, :focus-visible)) {
     background: var(--guide-focus) !important;
     box-shadow: inset 0 0 0 1px #73796c, inset 0 0 0 2px #fff9,

@@ -13,21 +13,13 @@ npm ci
 npm run build
 ```
 
-The build produces:
-
-```text
-dist/
-├── X360-Blades/             Installable theme folder
-└── x360-blades-sounds.star  Compiled plugin
-```
-
 ### Installation
 
 1. Fully exit Steam.
-2. Copy `dist/X360-Blades/` into `<Steam>/steamui/skins/`.
-3. Copy `dist/x360-blades-sounds.star` into Millennium's plugin directory: `$XDG_DATA_HOME/millennium/plugins/` (normally `~/.local/share/millennium/plugins/`) on Linux, or `<Steam>/millennium/plugins/` on Windows.
-4. Start Steam, enable **Xbox 360 Blades Sounds** in Millennium, and restart Steam so its backend installs the sounds.
-5. Select **Xbox 360 Blades**, enable theme JavaScript if prompted, and enter Big Picture.
+2. Unzip the theme, if downloaded via releases.
+2. Copy `X360-Blades/` into `<Steam>/millenium/themes`.
+3. Build and install the separate [Xbox 360 Blades Sounds plugin](https://github.com/Blade04208/xbox360-blades-sounds) for sound effects.
+4. Start Steam, select **Xbox 360 Blades**, enable theme JavaScript if prompted, and enter Big Picture.
 
 
 ## Credits

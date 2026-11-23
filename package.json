@@ -4,13 +4,9 @@
   "type": "module",
   "scripts": {
     "build": "node build/index.mjs",
-    "build:theme": "node build/index.mjs theme",
-    "build:plugin": "node build/index.mjs plugin"
+    "build:theme": "node build/index.mjs"
   },
   "engines": {
     "node": ">=22"
-  },
-  "devDependencies": {
-    "@steambrew/starlight": "1.1.7"
   }
 }

@@ -2,7 +2,16 @@
   "name": "Xbox 360 Blades",
   "author": "tameranian, Blade0",
   "description": "Jump In to 2010 again",
-  "version": "1.0.0",
+  "version": "0.2.0",
+  "github": {
+    "owner": "Blade04208",
+    "repo_name": "xbox360-blades"
+  },
+  "discord_support": {
+    "inviteCodeExcludingLink": "https://discord.gg/XTemK53jWx"
+  },
+  "header_image": "https://private-user-images.githubusercontent.com/74104258/715188049-f3c80742-1882-4a59-b1f3-7d502819aa36.png",
+  "splash_image": "https://private-user-images.githubusercontent.com/74104258/715188049-f3c80742-1882-4a59-b1f3-7d502819aa36.png",
   "Patches": [
     {
       "MatchRegexString": "https://(store\\.steampowered|steamcommunity)\\.com.*",
