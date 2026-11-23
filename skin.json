@@ -10,8 +10,8 @@
   "discord_support": {
     "inviteCodeExcludingLink": "https://discord.gg/XTemK53jWx"
   },
-  "header_image": "https://raw.githubusercontent.com/Blade04208/xbox360-blades/refs/heads/main/meta/banner.png",
-  "splash_image": "https://raw.githubusercontent.com/Blade04208/xbox360-blades/refs/heads/main/meta/banner.png",
+  "header_image": "https://blade04208.github.io/xbox360-blades/assets/meta/banner.png",
+  "splash_image": "https://blade04208.github.io/xbox360-blades/assets/meta/banner.png",
   "Patches": [
     {
       "MatchRegexString": "https://(store\\.steampowered|steamcommunity)\\.com.*",
