@@ -1,9 +1,4 @@
 /* Popup windows */
-:root {
-    --u: calc(100vh / 770);
-    /* --u is the "scale" for about everything. use this instead of measurements like px to make sure that stuff works across screen sizes*/
-}
-
 html[data-x360-popup] body,
 html[data-x360-popup] body * {
     font-family: "NXE Convection", "Segoe UI", sans-serif !important;
@@ -20,11 +15,11 @@ html[data-x360-popup] #browserview_target,
 
 #MainNavMenuContainer .Menu,
 #QuickAccess-Menu.QuickAccessMenu {
-    --guide-rail-width: min(calc(64 * var(--u)), 56px);
-    --guide-rail-height: calc(940 * var(--u));
-    --guide-rail-top: calc(-56 * var(--u));
-    --guide-header-height: calc(100 * var(--u));
-    --guide-footer-height: calc(162 * var(--u));
+    --guide-rail-width: 56px;
+    --guide-rail-height: max(940px, calc(100% + 56px));
+    --guide-rail-top: -56px;
+    --guide-header-height: 100px;
+    --guide-footer-height: 162px;
     --guide-focus: linear-gradient(#eee 0%, #d7d7d7 48%, #bcbfba 52%, #d9dcd5);
     background:
         url("../assets/guide/rail.svg") right var(--guide-rail-top) / var(--guide-rail-width) var(--guide-rail-height) no-repeat,
@@ -43,7 +38,7 @@ html[data-x360-popup] #browserview_target,
     box-sizing: border-box !important;
     height: 100% !important;
     margin-block: 0 !important;
-    padding: calc(108 * var(--u)) var(--guide-rail-width) calc(70 * var(--u)) min(12%, calc(72 * var(--u))) !important;
+    padding: 108px var(--guide-rail-width) 70px min(12%, 72px) !important;
     justify-content: flex-start !important;
     overflow-y: auto !important;
 }
@@ -51,10 +46,10 @@ html[data-x360-popup] #browserview_target,
 #MainNavMenuContainer .Menu[data-x360-time]::before {
     content: attr(data-x360-time);
     position: absolute;
-    top: calc(65 * var(--u));
-    right: calc(var(--guide-rail-width) + 10 * var(--u));
+    top: 65px;
+    right: calc(var(--guide-rail-width) + 10px);
     color: #fff;
-    font-size: calc(21 * var(--u));
+    font-size: 21px;
     pointer-events: none;
 }
 
@@ -67,7 +62,7 @@ html[data-x360-popup] #browserview_target,
 #MainNavMenuContainer .Item {
     box-sizing: border-box !important;
     width: 100% !important;
-    height: calc(49 * var(--u)) !important;
+    height: 49px !important;
     min-height: 32px !important;
     max-height: none !important;
     margin: 0 !important;
@@ -89,7 +84,7 @@ html[data-x360-popup] #browserview_target,
 #MainNavMenuContainer .Item .ItemLabel,
 #MainNavMenuContainer .Item .ItemLabel * {
     color: #171a15 !important;
-    font-size: min(calc(19 * var(--u)), 18px) !important;
+    font-size: 18px !important;
     font-weight: 400 !important;
     text-shadow: none !important;
 }
@@ -100,9 +95,9 @@ html[data-x360-popup] #browserview_target,
 
 #MainNavMenuContainer .ItemIcon {
     flex-shrink: 0 !important;
-    width: min(calc(24 * var(--u)), 24px) !important;
-    height: min(calc(24 * var(--u)), 24px) !important;
-    margin-right: min(calc(8 * var(--u)), 8px) !important;
+    width: 24px !important;
+    height: 24px !important;
+    margin-right: 8px !important;
 }
 
 #MainNavMenuContainer .Item svg {
@@ -127,7 +122,7 @@ html[data-x360-popup] #browserview_target,
 }
 
 #QuickAccess-Menu.QuickAccessMenu {
-    --guide-header-height: calc(62 * var(--u));
+    --guide-header-height: 62px;
     --guide-footer-height: 40px;
     position: relative !important;
     padding-left: var(--guide-rail-width) !important;
@@ -223,7 +218,7 @@ html[data-x360-popup] #browserview_target,
 
 #QuickAccess-Menu .Tabs {
     position: absolute !important;
-    top: calc(-25 * var(--u)) !important;
+    top: -25px !important;
     left: calc(-0.4 * var(--guide-rail-width) - 14px) !important;
     width: 28px !important;
     height: 100vh !important;
@@ -243,7 +238,7 @@ html[data-x360-popup] #browserview_target,
 }
 
 #QuickAccess-Menu .Tabs .Tab {
-    --tab-height: calc(52 * var(--u));
+    --tab-height: 52px;
     width: 28px !important;
     min-height: 32px !important;
     flex: 0 0 auto !important;
@@ -796,7 +791,7 @@ html[data-x360-popup="QuickAccess"] .DialogButton:is(.gpfocus, :hover) {
 
 .BasicUiRoot:not([data-x360-off]) .DownloadsPage .TopSection:has(> .Section.Empty) {
     height: auto !important;
-    min-height: calc(56 * var(--u)) !important;
+    min-height: 56px !important;
     flex: 0 0 auto !important;
 }
 
@@ -807,7 +802,7 @@ html[data-x360-popup="QuickAccess"] .DialogButton:is(.gpfocus, :hover) {
 .BasicUiRoot:not([data-x360-off]) .DownloadsPage .TopSection:has(> .Section.Empty) .RemoteClientManagementRow {
     position: relative !important;
     inset: auto !important;
-    margin: calc(14 * var(--u)) calc(12 * var(--u)) !important;
+    margin: 14px 12px !important;
 }
 
 .BasicUiRoot:not([data-x360-off]) .DownloadsPage .RemoteClientManagementBackground {

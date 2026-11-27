@@ -1,17 +1,12 @@
-:root {
-    --u: calc(100vh / 770);
-    /* --u is the "scale" for about everything. use this instead of measurements like px to make sure that stuff works across screen sizes*/
-}
-
 .BasicUiRoot:not([data-x360-off]) {
-    --wing: min(3.6vw, 48 * var(--u));
-    --step: calc(48 * var(--u));
+    --wing: min(3.6vw, 48px);
+    --step: 48px;
     --x360-left-count: 1;
     --x360-right-count: 3;
-    --x360-left: calc(var(--x360-left-count) * var(--step) + var(--wing) + 140 * var(--u));
-    --x360-right: calc(var(--x360-right-count) * var(--step) + var(--wing) + 100 * var(--u));
-    --x360-top: calc(100 * var(--u));
-    --x360-foot: calc(132 * var(--u));
+    --x360-left: calc(var(--x360-left-count) * var(--step) + var(--wing) + 140px);
+    --x360-right: calc(var(--x360-right-count) * var(--step) + var(--wing) + 100px);
+    --x360-top: 100px;
+    --x360-foot: 132px;
     --x360-font: "NXE Convection", "Segoe UI", sans-serif;
     --x360-bg-light: #ffd36a;
     --x360-bg-mid: #efa631;
@@ -65,9 +60,9 @@
 #x360-blades button,
 #x360-blades .x360-jewel {
     position: absolute;
-    top: calc((-70 + 15 * var(--depth, 0)) * var(--u));
-    height: calc(940 * var(--u));
-    width: calc(136 * var(--u));
+    top: calc(-70px + 15px * var(--depth, 0));
+    height: max(940px, calc(100% + 70px));
+    width: 136px;
     left: calc(var(--slot) * var(--step));
     margin: 0;
     padding: 0;
@@ -83,14 +78,14 @@
     --rail: url("../assets/blades/blade_grey_left.svg");
     background-image: var(--rail);
     color: #282624;
-    font: 400 calc(26 * var(--u)) / 1 var(--x360-font);
+    font: 400 26px / 1 var(--x360-font);
     pointer-events: auto;
     cursor: pointer;
 }
 
 #x360-blades button[data-side="right"] {
-    width: calc(161 * var(--u));
-    left: calc(100% - var(--slot) * var(--step) - 161 * var(--u));
+    width: 161px;
+    left: calc(100% - var(--slot) * var(--step) - 161px);
     --rail: url("../assets/blades/blade_grey_rt.svg");
 }
 
@@ -137,7 +132,7 @@
     content: "";
     position: absolute;
     inset-block: 0;
-    width: calc(var(--wing) + 92 * var(--u));
+    width: calc(var(--wing) + 92px);
     z-index: 1;
     mask: url("../assets/blades/wing-mask.svg") center / 100% 100%;
     background: url("../assets/blades/wing-rim.svg") center / 100% 100%, linear-gradient(#d8d8d8f7, #eeeeeef4 46%, #bcbcbce8 77%, #edededef), var(--x360-wing-tint) center / 100% 100%;
@@ -151,12 +146,12 @@
 
 #x360-blades .x360-title {
     position: absolute;
-    left: calc(var(--x360-left) + 14 * var(--u));
-    top: calc(50 * var(--u));
-    font: 400 calc(31 * var(--u)) / 1 var(--x360-font);
+    left: calc(var(--x360-left) + 14px);
+    top: 50px;
+    font: 400 31px / 1 var(--x360-font);
     text-transform: capitalize;
     color: #fff;
-    text-shadow: 0 calc(2 * var(--u)) calc(4 * var(--u)) #0006;
+    text-shadow: 0 2px 4px #0006;
 }
 
 .BasicUiRoot:not([data-x360-off]) #MainNavMenu-Rest {
@@ -191,39 +186,39 @@
 
 .BasicUiRoot:not([data-x360-off]) #header {
     top: 0;
-    left: calc(-40 * var(--u));
-    width: calc(100% + 80 * var(--u));
-    height: calc(92 * var(--u));
+    left: -40px;
+    width: calc(100% + 80px);
+    height: 92px;
     min-height: 0 !important;
     max-height: none !important;
     box-sizing: border-box;
-    padding: calc(35 * var(--u)) calc(12 * var(--u)) 0 !important;
+    padding: 35px 12px 0 !important;
     background: transparent !important;
     box-shadow: none;
 }
 
 .BasicUiRoot:not([data-x360-off]) #Footer {
-    left: calc(var(--x360-left) - 40 * var(--u)) !important;
-    right: calc(var(--x360-right) - 40 * var(--u)) !important;
+    left: calc(var(--x360-left) - 40px) !important;
+    right: calc(var(--x360-right) - 40px) !important;
     width: auto;
     height: var(--x360-foot) !important;
     box-sizing: border-box;
     align-items: flex-start;
     backdrop-filter: none !important;
-    padding-top: calc(10 * var(--u));
+    padding-top: 10px;
     background: transparent;
     box-shadow: none;
 }
 
 #x360-blades .x360-bands {
     position: absolute;
-    inset: 0 calc(var(--x360-right) - 70 * var(--u)) 0 calc(var(--x360-left) - 80 * var(--u));
-    --band-corner: calc(62 * var(--u));
-    --band-rise: calc(62 * var(--u));
+    inset: 0 calc(var(--x360-right) - 70px) 0 calc(var(--x360-left) - 80px);
+    --band-corner: 62px;
+    --band-rise: 62px;
 }
 
 .BasicUiRoot[data-blade="4"]:not([data-x360-detail]) #x360-blades .x360-bands {
-    right: calc(var(--x360-right) - 54 * var(--u));
+    right: calc(var(--x360-right) - 54px);
 }
 
 .x360-bands::before,
@@ -235,7 +230,7 @@
 
 .x360-bands::before {
     top: 0;
-    height: calc(92 * var(--u));
+    height: 92px;
     border-radius: 0 0 var(--band-corner) var(--band-corner) / 0 0 var(--band-rise) var(--band-rise);
     background: linear-gradient(#53220020, #35140038);
     box-shadow: inset 0 -2px 3px #0004;
@@ -262,7 +257,7 @@
     display: block !important;
     height: auto !important;
     min-height: 0 !important;
-    padding: calc(14 * var(--u)) 0 0 !important;
+    padding: 14px 0 0 !important;
 }
 
 .BasicUiRoot:not([data-x360-off]) .RecentSection {
@@ -282,14 +277,14 @@
 .BasicUiRoot:not([data-x360-off]) #Footer .ActionButtonLabel {
     text-transform: none !important;
     font-weight: 400 !important;
-    font-size: calc(19 * var(--u)) !important;
+    font-size: 19px !important;
     color: #fff !important;
     text-shadow: 0 1px 2px #0008 !important;
 }
 
 .BasicUiRoot:not([data-x360-off]) #Footer .FooterGlyphSize {
-    width: calc(30 * var(--u)) !important;
-    height: calc(30 * var(--u)) !important;
+    width: 30px !important;
+    height: 30px !important;
 }
 
 .BasicUiRoot:not([data-x360-off]) #Footer .ActionButtonGlyph {
@@ -301,7 +296,7 @@
 .BasicUiRoot:not([data-x360-off]) .DialogButton {
     background: var(--x360-plate) !important;
     color: #1c282e !important;
-    border-radius: calc(4 * var(--u)) !important;
+    border-radius: 4px !important;
     box-shadow:
         inset 0 1px 0 #fff,
         0 1px 2px #0006 !important;
@@ -313,7 +308,7 @@
     color: #fff !important;
     box-shadow:
         inset 0 1px 0 #d9f59a,
-        0 0 calc(10 * var(--u)) #b6e84a99 !important;
+        0 0 10px #b6e84a99 !important;
 }
 
 .BasicUiRoot:not([data-x360-off]) .Tab.Selected {
@@ -340,7 +335,7 @@
 .BasicUiRoot:not([data-x360-off]) .PagedSettingsDialog_PageListColumn {
     background: transparent !important;
     box-shadow: none !important;
-    padding: calc(8 * var(--u)) !important;
+    padding: 8px !important;
 }
 
 .BasicUiRoot:not([data-x360-off]) .PagedSettingDialog_ContentColumn {
@@ -349,7 +344,7 @@
 
 .BasicUiRoot:not([data-x360-off]) .Field.HighlightOnFocus:is(.gpfocus, .gpfocuswithin) {
     background: #9ccc3440 !important;
-    box-shadow: inset calc(4 * var(--u)) 0 0 #a9d43c !important;
+    box-shadow: inset 4px 0 0 #a9d43c !important;
 }
 
 .BasicUiRoot:not([data-x360-off]) #header::before {
@@ -360,7 +355,7 @@
     text-transform: none !important;
     font-weight: 400 !important;
     letter-spacing: 0 !important;
-    border-radius: calc(4 * var(--u)) !important;
+    border-radius: 4px !important;
 }
 
 .BasicUiRoot:not([data-x360-off]) .Tab * {
@@ -371,14 +366,14 @@
 .BasicUiRoot:not([data-x360-off]) .LibraryItemBox {
     box-shadow:
         0 0 0 1px #ffffff59,
-        0 calc(4 * var(--u)) calc(10 * var(--u)) #00000080 !important;
-    border-radius: calc(3 * var(--u)) !important;
+        0 4px 10px #00000080 !important;
+    border-radius: 3px !important;
 }
 
 .BasicUiRoot:not([data-x360-off]) :is(.gpfocus .LibraryItemBox, .LibraryItemBox.gpfocus, .gpfocus > * > .LibraryItemBox) {
     box-shadow:
-        0 0 0 calc(3 * var(--u)) #fff,
-        0 0 calc(18 * var(--u)) calc(4 * var(--u)) #b6e84ad9 !important;
+        0 0 0 3px #fff,
+        0 0 18px 4px #b6e84ad9 !important;
 }
 
 .BasicUiRoot:not([data-x360-off]) .TabbedContent {
@@ -392,7 +387,7 @@
     background: transparent !important;
     box-shadow: inset 0 -2px #2c124c66, inset -1px 0 #29154066 !important;
     color: #170f22 !important;
-    font-size: clamp(16px, 2.9vh, 27px);
+    font-size: 22px;
 }
 
 .BasicUiRoot:not([data-x360-off]) .PagedSettingsDialog_PageListItem * {
@@ -430,7 +425,7 @@
 
 .BasicUiRoot:not([data-x360-off]) .Field.Background {
     background: #ffffff14 !important;
-    border-radius: calc(4 * var(--u)) !important;
+    border-radius: 4px !important;
     box-shadow: inset 0 1px 0 #ffffff26 !important;
 }
 
@@ -454,7 +449,7 @@
 .BasicUiRoot:not([data-x360-off]) .PlayButton {
     background: var(--x360-focus) !important;
     color: #fff !important;
-    border-radius: calc(4 * var(--u)) !important;
+    border-radius: 4px !important;
     box-shadow:
         inset 0 1px 0 #d9f59a,
         0 1px 3px #0008 !important;
@@ -464,14 +459,14 @@
 .BasicUiRoot:not([data-x360-off]) .PlayButton:is(.gpfocus, :hover) {
     box-shadow:
         inset 0 1px 0 #d9f59a,
-        0 0 0 calc(2 * var(--u)) #fff,
-        0 0 calc(14 * var(--u)) #b6e84acc !important;
+        0 0 0 2px #fff,
+        0 0 14px #b6e84acc !important;
 }
 
 .BasicUiRoot:not([data-x360-off]) .MenuButton {
     background: var(--x360-plate) !important;
     color: #1c282e !important;
-    border-radius: calc(4 * var(--u)) !important;
+    border-radius: 4px !important;
     box-shadow:
         inset 0 1px 0 #fff,
         0 1px 2px #0006 !important;
@@ -493,7 +488,7 @@
 .BasicUiRoot:not([data-x360-off]) .AppDetailsRoot :is(.Panel, .PostTextEntryArea)[class*="_31ptFGGMZrSQc5BCX1e5lm"],
 .BasicUiRoot:not([data-x360-off]) .PostTextEntryArea {
     background: #ffffff14 !important;
-    border-radius: calc(4 * var(--u)) !important;
+    border-radius: 4px !important;
     box-shadow: inset 0 1px 0 #ffffff26 !important;
 }
 
@@ -516,7 +511,7 @@
 }
 
 .BasicUiRoot:not([data-x360-off]) #Main:has(.BrowserContainer) {
-    border-radius: calc(14 * var(--u)) !important;
+    border-radius: 14px !important;
 }
 
 .BasicUiRoot:not([data-x360-off]) .BackgroundGlass {
@@ -529,10 +524,10 @@
 }
 
 .BasicUiRoot:not([data-x360-off]) #header .SearchAndTitleContainer.ShowingSearch {
-    flex: 0 0 calc(44 * var(--u)) !important;
+    flex: 0 0 44px !important;
     min-width: 0 !important;
     margin-left: auto !important;
-    border-radius: calc(20 * var(--u)) !important;
+    border-radius: 20px !important;
     overflow: hidden !important;
     background: transparent !important;
     padding: 0 !important;
@@ -540,11 +535,11 @@
 }
 
 .BasicUiRoot:not([data-x360-off]) #header .SearchAndTitleContainer.ShowingSearch:is(.gpfocus, .gpfocuswithin, :focus-within, :has(.gpfocus)) {
-    flex-basis: min(24vw, calc(230 * var(--u))) !important;
+    flex-basis: min(24vw, 230px) !important;
 }
 
 .BasicUiRoot:not([data-x360-off]) #header .SearchFieldBackground {
-    border-radius: calc(20 * var(--u)) !important;
+    border-radius: 20px !important;
     inset: 0 !important;
     width: auto !important;
     opacity: 0 !important;
@@ -556,7 +551,7 @@
 }
 
 .BasicUiRoot:not([data-x360-off]) #header .SearchIconLeft {
-    left: calc(12 * var(--u)) !important;
+    left: 12px !important;
     opacity: 1 !important;
     transform: none !important;
 }
@@ -568,7 +563,7 @@
 .BasicUiRoot:not([data-x360-off]) #header .SearchBox {
     opacity: 1 !important;
     width: 100% !important;
-    padding-left: calc(40 * var(--u)) !important;
+    padding-left: 40px !important;
     box-sizing: border-box !important;
     background: transparent !important;
     color: #fff !important;
@@ -578,7 +573,7 @@
     opacity: 1 !important;
     box-shadow:
         inset 0 0 0 2px #fff,
-        0 0 calc(10 * var(--u)) #b6e84acc !important;
+        0 0 10px #b6e84acc !important;
 }
 
 .BasicUiRoot:not([data-x360-off]) :is(.DialogButton, .Tab, .MenuButton):is(.gpfocus, :focus-visible) {
@@ -618,7 +613,7 @@
     opacity: 1 !important;
     padding-top: 0 !important;
     background: linear-gradient(#25511de0, #163310f2) !important;
-    border-radius: calc(14 * var(--u)) calc(14 * var(--u)) 0 0;
+    border-radius: 14px 14px 0 0;
     box-shadow: 0 3px 8px #0005 !important;
 }
 
@@ -632,7 +627,7 @@
 }
 
 .BasicUiRoot:not([data-x360-off])[data-blade="1"] #Main {
-    border-radius: 0 0 calc(14 * var(--u)) calc(14 * var(--u)) !important;
+    border-radius: 0 0 14px 14px !important;
     margin-right: 0 !important;
 }
 
@@ -742,7 +737,7 @@
 }
 
 .BasicUiRoot:not([data-x360-off]) #Main>*:has(.RecentSection) {
-    --x360-fade: calc(34 * var(--u));
+    --x360-fade: 34px;
     -webkit-mask-image:
         linear-gradient(90deg,
             transparent 0,
@@ -764,9 +759,9 @@
 .BasicUiRoot:not([data-x360-off]) #Main .TabContentsScroll {
     -webkit-mask-image: linear-gradient(180deg,
             #000 0,
-            #000 calc(100% - 34 * var(--u)),
+            #000 calc(100% - 34px),
             transparent 100%);
-    mask-image: linear-gradient(180deg, #000 0, #000 calc(100% - 34 * var(--u)), transparent 100%);
+    mask-image: linear-gradient(180deg, #000 0, #000 calc(100% - 34px), transparent 100%);
 }
 
 .BasicUiRoot:not([data-x360-off]) #x360-blades>button,
@@ -778,7 +773,7 @@
 }
 
 .BasicUiRoot:not([data-x360-off]) #x360-blades>button[data-side="right"] {
-    transform: translateX(calc(100vw - var(--wing) - var(--slot) * var(--step) - 161 * var(--u)));
+    transform: translateX(calc(100vw - var(--wing) - var(--slot) * var(--step) - 161px));
 }
 
 /* Page transitions */
@@ -867,7 +862,7 @@
 @media (min-aspect-ratio: 4/3) {
     .BasicUiRoot:not([data-x360-off]) #Footer .FooterLegend:has(img[src*="button_b."]):has(img[src*="button_a."]) {
         position: relative;
-        padding-inline-end: calc(116 * var(--u));
+        padding-inline-end: 116px;
         overflow: visible;
     }
 
@@ -878,7 +873,7 @@
     }
 
     .BasicUiRoot:not([data-x360-off]) #Footer .FooterLegend:has(img[src*="button_a."]) .ActionButtonLegend:has(img[src*="button_b."]) {
-        transform: translateX(calc(-19 * var(--u)));
+        transform: translateX(-19px);
     }
 
     .BasicUiRoot:not([data-x360-off]) #Footer .FooterLegend:has(img[src*="button_b."]) .ActionButtonLegend:has(img[src*="button_a."]) {
@@ -887,9 +882,9 @@
 }
 
 
-@media (max-aspect-ratio: 4/3) {
+@media (max-aspect-ratio: 4/3), (max-width: 800px) {
     .BasicUiRoot:not([data-x360-off]) {
         --wing: 0px;
-        --step: 3.2vw;
+        --step: min(3.2vw, 48px);
     }
 }
