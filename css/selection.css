@@ -1,0 +1,84 @@
+.BasicUiRoot:not([data-x360-off]) .x360-selection-list {
+    position: relative;
+    isolation: isolate;
+    --x360-selection-y: 0px;
+    --x360-selection-height: 0px;
+}
+
+.x360-dash-shortcuts {
+    margin-top: 8px;
+    flex-shrink: 0;
+}
+
+.x360-selection-surface {
+    position: absolute;
+    inset: 0 -9px auto 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.x360-selection-surface[hidden] {
+    display: none !important;
+}
+
+.x360-selection-surface::before,
+.x360-selection-surface::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, #ffffff05, #ffffff12 68%, #13240912);
+}
+
+.x360-selection-surface::before {
+    top: 0;
+    height: var(--x360-selection-y);
+    border-radius: 0 0 10px 0;
+    box-shadow: inset -5px -3px 5px -3px #12200c99,
+        2px 2px 3px -1px #ffffd975;
+}
+
+.x360-selection-surface::after {
+    top: calc(var(--x360-selection-y) + var(--x360-selection-height));
+    bottom: 0;
+    border-radius: 0 12px 0 0;
+    box-shadow: inset -5px 4px 6px -3px #12200c99,
+        2px -2px 3px -1px #ffffd975;
+}
+
+.x360-selection-band {
+    position: absolute;
+    inset: 0 0 auto;
+    height: var(--x360-selection-height);
+    transform: translateY(var(--x360-selection-y));
+    background: linear-gradient(90deg, #fffbe524, #fffde1a6 48%, #fffde17a 76%, #fffde100);
+}
+
+.BasicUiRoot:not([data-x360-off]) .x360-selection-list > :is(.x360-dash-row, .PagedSettingsDialog_PageListItem) {
+    position: relative;
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: inset 0 -2px #29311e66 !important;
+    border-bottom: 0;
+    filter: none;
+}
+
+.BasicUiRoot:not([data-x360-off]) .x360-selection-list > [data-x360-selected] {
+    outline: none !important;
+    box-shadow: none !important;
+    /* The geometry and shading supply the focus cue instead of an outer ring. */
+}
+
+/* The top edge of the gap replaces the previous row's divider. */
+.BasicUiRoot:not([data-x360-off]) .x360-selection-list > :has(+ [data-x360-selected]) {
+    box-shadow: none !important;
+}
+
+/* Keep the curved edge inside Steam's horizontally clipped, scrollable sidebar. */
+.BasicUiRoot:not([data-x360-off]) .PagedSettingsDialog_PageList.x360-selection-list > .x360-selection-surface {
+    right: 3px;
+}
+
+.BasicUiRoot:not([data-x360-off]) .PagedSettingsDialog_PageList.x360-selection-list > .PagedSettingsDialog_PageListItem {
+    width: calc(100% - 12px);
+}

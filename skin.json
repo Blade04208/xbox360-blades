@@ -12,6 +12,27 @@
   },
   "header_image": "https://blade04208.github.io/xbox360-blades/assets/meta/banner.png",
   "splash_image": "https://blade04208.github.io/xbox360-blades/assets/meta/banner.png",
+  "Conditions": {
+    "Dashboard layout": {
+      "description": "Choose the modified Blades dashboard or Steam's stock home.",
+      "tab": "Dashboard",
+      "default": "Blades",
+      "values": {
+        "Blades": {
+          "TargetCss": {
+            "affects": ["^Steam Big Picture Mode$"],
+            "src": "css/dashboard-blades.css"
+          }
+        },
+        "Steam": {
+          "TargetCss": {
+            "affects": ["^Steam Big Picture Mode$"],
+            "src": "css/dashboard-steam.css"
+          }
+        }
+      }
+    }
+  },
   "Patches": [
     {
       "MatchRegexString": "https://(store\\.steampowered|steamcommunity)\\.com.*",
@@ -51,7 +72,15 @@
     },
     {
       "MatchRegexString": "^Steam Big Picture Mode$",
+      "TargetCss": "css/dashboard.css"
+    },
+    {
+      "MatchRegexString": "^Steam Big Picture Mode$",
       "TargetCss": "css/guide.css"
+    },
+    {
+      "MatchRegexString": "^Steam Big Picture Mode$",
+      "TargetCss": "css/selection.css"
     },
     {
       "MatchRegexString": "^Steam Big Picture Mode$",
@@ -72,6 +101,14 @@
     {
       "MatchRegexString": "^Steam Big Picture Mode$",
       "TargetJs": "js/pages.js"
+    },
+    {
+      "MatchRegexString": "^Steam Big Picture Mode$",
+      "TargetJs": "js/dashboard.js"
+    },
+    {
+      "MatchRegexString": "^Steam Big Picture Mode$",
+      "TargetJs": "js/selection.js"
     }
   ]
 }

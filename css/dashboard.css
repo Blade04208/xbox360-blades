@@ -1,0 +1,318 @@
+.BasicUiRoot[data-x360-dashboard="blades"]:not([data-x360-off]) {
+    --x360-left: calc(var(--x360-left-count) * var(--step) + var(--wing) + 100px);
+    --x360-right: calc(var(--x360-right-count) * var(--step) + var(--wing) + 66px);
+    --x360-bg-light: #ffe585;
+    --x360-bg-mid: #f3b83c;
+    --x360-bg-dark: #bd741e;
+}
+
+.BasicUiRoot[data-x360-dashboard] #Main {
+    position: relative;
+}
+
+.BasicUiRoot[data-x360-dashboard="blades"] #Main > [data-x360-native-home] {
+    display: none !important;
+}
+
+.BasicUiRoot[data-x360-dashboard] #Main > .x360-dashboard-host {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    color: #352b1b;
+    padding: 0 12px 12px;
+    pointer-events: none;
+}
+
+.x360-dashboard-host * {
+    box-sizing: border-box;
+}
+
+.x360-dashboard-host[hidden], .x360-dashboard-host [hidden] {
+    display: none !important;
+}
+
+.x360-dash-button {
+    appearance: none;
+    display: block;
+    margin: 0;
+    min-width: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.x360-dash-button:is(:focus-visible, .gpfocus) {
+    outline: 2px solid #fff8c9;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px #8a631e, 0 0 12px #fff5a580;
+}
+
+.x360-dash-button:hover {
+    filter: brightness(1.08);
+}
+
+.x360-dash-content {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 6px 4px;
+    pointer-events: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #9c681c transparent;
+}
+
+.x360-dash-columns {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 24px;
+    flex: 1;
+    min-height: min-content;
+}
+
+.x360-dash-left {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.x360-dash-profile {
+    width: 100%;
+    border: 2px solid #a37835;
+    border-radius: 8px;
+    background: linear-gradient(105deg, #d6d6bbd9, #f2dfafeb 65%, #edbd67d9);
+    box-shadow: inset 0 1px 3px #fff8d0, 0 2px 3px #98601e50;
+    padding: 0;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.x360-dash-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 22px;
+    line-height: 1.25;
+    padding: 2px 8px;
+    background: #916b2933;
+    border-bottom: 1px solid #9f7a3559;
+}
+
+.x360-dash-profile-body {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    min-height: 76px;
+}
+
+.x360-dash-avatar {
+    width: 58px;
+    height: 58px;
+    object-fit: cover;
+    border: 2px solid #a6a38b;
+    box-shadow: 0 0 0 1px #fff5be;
+    flex-shrink: 0;
+}
+
+.x360-dash-profile-details {
+    font-size: 20px;
+    line-height: 1.35;
+    min-width: 0;
+}
+
+.x360-dash-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    min-height: 42px;
+    padding: 5px 10px;
+    border-bottom: 2px solid #a073348c;
+    box-shadow: 0 1px 0 #ffec9c80;
+    font-size: 22px;
+}
+
+.x360-dash-row:is(:hover, .gpfocus, :focus-visible) {
+    background: linear-gradient(90deg, #fff3b475, #f9d36333);
+}
+
+.x360-dash-icon {
+    display: inline-block;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    color: #fff0b0;
+    filter: drop-shadow(0 1px 1px #805b30);
+}
+
+.x360-dash-icon-games::before {
+    content: "";
+    position: absolute;
+    inset: 5px 1px;
+    border-radius: 8px 8px 5px 5px;
+    background: currentColor;
+}
+
+.x360-dash-icon-games::after {
+    content: "+  ·";
+    position: absolute;
+    inset: 0;
+    text-align: center;
+    line-height: 24px;
+    font-size: 18px;
+    color: #a97b35;
+}
+
+.x360-dash-icon-friends::before {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    top: 0;
+    left: 8px;
+    background: currentColor;
+    border-radius: 50%;
+}
+
+.x360-dash-icon-friends::after {
+    content: "";
+    position: absolute;
+    inset: 11px 4px 0;
+    border-radius: 8px 8px 3px 3px;
+    background: currentColor;
+}
+
+.x360-dash-icon-downloads::before {
+    content: "↓";
+    display: block;
+    font: bold 29px / 21px sans-serif;
+    text-align: center;
+    border-bottom: 3px solid;
+}
+
+.x360-dash-icon-home {
+    width: 32px;
+    height: 32px;
+    background: url('../assets/glyphs/guide.png') center / contain no-repeat;
+}
+
+.x360-dash-feature {
+    position: relative;
+    width: 100%;
+    min-height: 80px;
+    flex: 1;
+    margin-top: 10px;
+    overflow: hidden;
+    border: 3px solid #a27f37;
+    border-radius: 8px;
+    background: linear-gradient(#60685a, #414c44);
+    box-shadow: inset 0 0 0 1px #fff3b280, 0 1px 3px #78501e70;
+}
+
+.x360-dash-game-art {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.x360-dash-game-title {
+    position: absolute;
+    inset: auto 0 0;
+    padding: 18px 10px 6px;
+    background: linear-gradient(transparent, #152017ed);
+    color: #fff5d0;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.x360-dash-right {
+    min-width: 0;
+    font-size: 22px;
+    line-height: 1.35;
+    padding: 4px 0;
+}
+
+.x360-dash-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 110px;
+    line-height: 1;
+    text-align: center;
+    color: #679329;
+    text-shadow: 0 1px 0 #ffeda5, 0 2px 2px #7a561b;
+}
+
+.x360-dash-brand span:first-child {
+    font-size: 42px;
+    letter-spacing: -2px;
+}
+
+.x360-dash-brand span:last-child {
+    font-size: 29px;
+    color: #ad5922;
+    letter-spacing: 1px;
+}
+
+.x360-dash-rule {
+    height: 2px;
+    margin: 16px 0 8px;
+    background: linear-gradient(90deg, transparent, #ac7a2e90, transparent);
+    box-shadow: 0 1px #ffeaa64d;
+}
+
+.x360-dash-right h2, .x360-dash-right p {
+    margin: 0 0 6px;
+    font-size: inherit;
+    font-weight: 400;
+    color: inherit;
+}
+
+.x360-dash-right .x360-dash-feed-description {
+    margin-top: 18px;
+    font-size: 18px;
+}
+
+.x360-dash-open {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    min-height: 44px;
+    padding: 4px 14px;
+    border: 2px solid #ad8139;
+    border-radius: 28px;
+    background: linear-gradient(#ffe68a66, #edc65d66);
+    box-shadow: inset 0 1px 3px #a87b3780, 0 1px 0 #ffe99c;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+@media (max-height: 640px) {
+    .x360-dash-content { gap: 12px; }
+    .x360-dash-profile-body { min-height: 62px; padding: 5px 8px; }
+    .x360-dash-avatar { width: 48px; height: 48px; }
+    .x360-dash-row { min-height: 36px; font-size: 20px; }
+    .x360-dash-feature { min-height: 72px; }
+    .x360-dash-right { font-size: 20px; }
+    .x360-dash-brand { min-height: 90px; }
+}
+
+@media (max-width: 850px) {
+    .x360-dash-columns { grid-template-columns: minmax(0, 1fr); }
+    .x360-dash-right { display: none; }
+}

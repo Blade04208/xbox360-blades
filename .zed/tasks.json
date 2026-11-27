@@ -7,15 +7,15 @@
     "reveal": "never",
     "hide": "never",
     "shell": {
-      "program": "bash"
+      "program": "bash",
     },
     "show_summary": true,
     "show_command": false,
-    "save": "all"
+    "save": "all",
   },
   {
     "label": "Open Steam",
-    "command": "steam -dev -tenfoot -windowed -openalldevtools &",
+    "command": "steam -dev -tenfoot -windowed -openalldevtools",
     "use_new_terminal": false,
     "allow_concurrent_runs": false,
     "reveal": "never",
@@ -23,6 +23,6 @@
     "shell": "system",
     "show_summary": true,
     "show_command": false,
-    "save": "all"
-  }
+    "save": "all",
+  },
 ]

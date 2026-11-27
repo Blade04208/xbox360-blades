@@ -1,9 +1,8 @@
 #! /bin/bash
-npm run build
-cp -r dist/X360-Blades ~/.local/share/Steam/millennium/themes/
+cp -r . ~/.local/share/Steam/millennium/themes/
 if pgrep -x "steam" >/dev/null; then
     echo "restarting steam, hold on"
-    steam -shutdown 
+    steam -shutdown
     sleep 5
-    steam -dev -tenfoot -windowed -openalldevtools &
+    steam -dev -tenfoot -windowed -openalldevtools
 fi
